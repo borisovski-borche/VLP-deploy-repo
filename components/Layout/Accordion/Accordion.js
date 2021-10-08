@@ -6,17 +6,14 @@ const Accordion = props => {
   const [isActive, setIsActive] = useState(false);
   const { title, content, academy, isModalOpen, toggleModal } = props;
 
-  console.log("accordion rerendered");
-
   return (
     <React.Fragment>
-      <div className={classes.accordion_title}>
+      <div
+        className={classes.accordion_title}
+        onClick={() => setIsActive(!isActive)}
+      >
         <div className={classes.accordion_title_text}>{title}</div>
-        <span
-          type="button"
-          onClick={() => setIsActive(!isActive)}
-          className={classes.accordion_arrow}
-        >
+        <span type="button" className={classes.accordion_arrow}>
           {isActive ? (
             <i className="fas fa-arrow-up"></i>
           ) : (
