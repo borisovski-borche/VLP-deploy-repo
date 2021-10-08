@@ -1,0 +1,299 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixins;
+
+.academyContainer {
+
+  background: white;
+  color: var.$logo-blue-dark;
+  border: 0.15rem solid var.$logo-blue-dark;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 0.4rem;
+  font-family: var.$font-poppins;
+  padding: 1rem 5rem;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+
+  @include mixins.breakpoint(mobileonly) {
+    border: 0.2rem solid var.$logo-blue-dark;
+    padding: 1rem 2rem;
+   padding-bottom: 2rem;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 3.2rem;
+    margin-left: 1rem;
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 2rem;
+    }
+  }
+
+  .h2Tag {
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .iconsDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .moneyIcon,
+  .calendarIcon,
+  .timeIcon {
+    height: 4rem;
+    margin-left: 1rem;
+
+    @include mixins.breakpoint(mobileonly) {
+      height: 2.3rem;
+    }
+  }
+
+  .iconSpan {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-right: 4rem;
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.6rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .courseInfoDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2rem auto;
+
+    @include mixins.breakpoint(mobileonly) {
+      display: block;
+    }
+  }
+
+  .aboutCourseDiv {
+    width: 55%;
+    padding: 1rem 3rem;
+    padding-right: 8rem;
+
+    @include mixins.breakpoint(mobileonly) {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .timelineDiv {
+    width: 45%;
+    background: var.$logo-blue-dark;
+    color: white;
+    padding: 1rem 4rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    margin-right: 5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    @include mixins.breakpoint(mobileonly) {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.3rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .competenciesTitle {
+    margin-top: 5rem;
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .competenciesList {
+    list-style-type: none;
+    margin-left: 1rem;
+  }
+
+  .competenciesListItem {
+    margin-left: 3rem;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .checkSign {
+    float: left;
+    margin-right: 2rem;
+    height: 2rem;
+    width: 1.2rem;
+    border-bottom: 0.5rem solid var.$navy-medium;
+    border-right: 0.5rem solid var.$navy-medium;
+    transform: rotate(45deg);
+
+    @include mixins.breakpoint(mobileonly) {
+      height: 1.8rem;
+      width: 1rem;
+      border-bottom: 0.3rem solid var.$navy-medium;
+      border-right: 0.3rem solid var.$navy-medium;
+      margin-left: 0.4rem;
+    }
+  }
+
+  .tableDiv {
+    overflow: hidden;
+    overflow-x: auto;
+    clear: both;
+    width: 100%;
+    border-radius: 0.4rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-left: 0.1rem solid var.$logo-blue-dark;
+    border-right: 0.1rem solid var.$logo-blue-dark;
+
+    @include mixins.scrollbars(
+      10rem,
+      0.8rem,
+      var.$logo-blue-dark,
+      var.$lavender-light
+    );
+
+    @include mixins.breakpoint(mobileonly) {
+      
+      @include mixins.scrollbars(
+        10rem,
+        0.6rem,
+        var.$logo-blue-dark,
+        var.$lavender-light
+      );
+    }
+  }
+
+  .priceTable {
+    border-radius: 1rem;
+    padding: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .tableRow {
+    border-top: 0.1rem solid var.$logo-blue-dark;
+    border-bottom: 0.1rem solid var.$logo-blue-dark;
+
+    td:nth-child(5) {
+      border-right: none;
+    }
+
+    th:nth-child(5) {
+      border-right: none;
+    }
+  }
+
+  .tableHeader {
+    background: var.$navy-light;
+    padding: 1rem;
+    border-right: 0.1rem solid var.$logo-blue-dark;
+  }
+
+  .tableCell {
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-right: 0.1rem solid var.$logo-blue-dark;
+  }
+
+  .termsDiv {
+    margin-top: 5rem;
+    padding: 1.6rem  4rem;
+    border: 0.1rem solid var.$logo-blue-dark;
+    border-radius: 0.4rem;
+    background: var.$navy-light;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  .programDiv {
+    padding: 1.6rem;
+    margin-top: 1rem;
+
+    p {
+      font-weight: bold;
+      margin-left: 3rem;
+
+      @include mixins.breakpoint(mobileonly) {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+      }
+    }
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .scholarshipDiv {
+    margin-top: 2rem;
+    padding: 1.6rem  4rem;
+    border: 0.1rem solid var.$logo-blue-dark;
+    border-radius: 0.4rem;
+    background: var.$navy-light;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    p {
+      font-weight: bold;
+    }
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .referralProgramDiv {
+    padding: 1.6rem;
+    margin: 3rem auto;
+    border-radius: 0.4rem;
+    border: 0.1rem solid var.$logo-blue-dark;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+  }
+
+  .jobDiv {
+    margin-top: 1rem;
+    padding: 1.6rem  4rem;
+    padding-bottom: 3rem;
+    border-radius: 0.4rem;
+    background: var.$logo-blue-dark;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+ 
+    @include mixins.breakpoint(mobileonly) {
+      font-size: 1.3rem;
+      margin-top: 0.8rem;
+    }
+  }
+}
+
+/*# sourceMappingURL=academies.css.map */
