@@ -20,7 +20,7 @@ const Accordion = props => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-arrow-up"
+              className="bi bi-arrow-up"
               viewBox="0 0 16 16"
             >
               <path
@@ -34,7 +34,7 @@ const Accordion = props => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-arrow-down"
+              className="bi bi-arrow-down"
               viewBox="0 0 16 16"
             >
               <path

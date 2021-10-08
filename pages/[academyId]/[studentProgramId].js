@@ -28,6 +28,9 @@ const AcademyPage = props => {
     );
   }, [router.asPath]);
 
+  console.log(router);
+  console.log(selectedAcademy.id);
+
   return (
     <div>
       <Head>
@@ -45,7 +48,7 @@ const AcademyPage = props => {
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-chevron-left"
+              className="bi bi-chevron-left"
               viewBox="0 0 16 16"
             >
               <path
@@ -70,6 +73,10 @@ const AcademyPage = props => {
           {academyData.study_programs.map(program => (
             <button
               className={classes.academyBtn}
+              style={{
+                backgroundColor:
+                  program.id === selectedAcademy.id ? "#a9d1ff" : "",
+              }}
               key={program.id}
               onClick={e => {
                 router.push(
