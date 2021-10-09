@@ -1,11 +1,12 @@
 import { Fragment } from "react";
+import Navbar from "../UI/Navbar/Navbar";
 
 const Layout = props => {
   return (
     <Fragment>
-      {/* <header>
-        <h3>HEADER PLACEHOLDER</h3>
-      </header> */}
+      <header>
+        <Navbar />
+      </header>
       <main>{props.children}</main>
       {/* <footer>
         <h3>FOOTER PLACEHOLDER</h3>

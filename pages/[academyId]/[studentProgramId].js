@@ -31,6 +31,7 @@ const AcademyPage = props => {
   return (
     <div>
       <Head>
+        <link rel="icon" type="image/png" href="/img/sedc-logo.png" />
         <title>SEDC - {selectedAcademy.title}</title>
       </Head>
       <main className={classes.academiesMain}>
