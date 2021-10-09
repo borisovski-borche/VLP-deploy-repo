@@ -19,7 +19,7 @@ const AcademiesLayout = props => {
             <div className={classes.iconsDiv}>
               <img
                 className={classes.moneyIcon}
-                src="/images/Group 219.svg"
+                src="/img/money-icon.svg"
                 alt=""
               />
               <span className={classes.iconSpan}>{academy.price} &euro;</span>
@@ -28,7 +28,7 @@ const AcademiesLayout = props => {
             <div className={classes.iconsDiv}>
               <img
                 className={classes.calendarIcon}
-                src="/images/Group 220.svg"
+                src="/img/calendar-icon.svg"
                 alt=""
               />
               <span className={classes.iconSpan}>
@@ -39,7 +39,7 @@ const AcademiesLayout = props => {
             <div className={classes.iconsDiv}>
               <img
                 className={classes.timeIcon}
-                src="/images/Group 221.svg"
+                src="/img/time-icon.svg"
                 alt=""
               />
               <span className={classes.iconSpan}>
