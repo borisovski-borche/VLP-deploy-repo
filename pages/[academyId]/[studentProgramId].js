@@ -34,10 +34,6 @@ const AcademyPage = props => {
   return (
     <div>
       <Head>
-        <script
-          src="https://kit.fontawesome.com/d32ad62e17.js"
-          crossorigin="anonymous"
-        ></script>
         <title>SEDC - {selectedAcademy.title}</title>
       </Head>
       <main className={classes.academiesMain}>
@@ -52,7 +48,7 @@ const AcademyPage = props => {
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
               />
             </svg>
@@ -74,8 +70,10 @@ const AcademyPage = props => {
             <button
               className={classes.academyBtn}
               style={{
+                borderBottom:
+                  program.id === selectedAcademy.id ? "4px solid #0079c8" : "",
                 backgroundColor:
-                  program.id === selectedAcademy.id ? "#a9d1ff" : "",
+                  program.id === selectedAcademy.id ? "#f5f5f6" : "",
               }}
               key={program.id}
               onClick={e => {
