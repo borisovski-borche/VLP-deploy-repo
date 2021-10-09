@@ -55,11 +55,11 @@ const AcademyPage = props => {
         </Link>
 
         <div className={classes.academyTitleDiv}>
-          <img
+          {/* <img
             className={classes.screenIcon}
             src={`/img/${academyData.id}.png`}
             alt=""
-          />
+          /> */}
           <h1 className={classes.title}>{academyData.title}</h1>
         </div>
 

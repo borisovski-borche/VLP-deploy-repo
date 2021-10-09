@@ -2,7 +2,8 @@
 @use "../../styles/mixins.scss" as mixins;
 
 .academiesMain {
-  background-color: var.$primary-dark;
+  // background-color: var.$primary-dark;
+  background: rgb(0, 32, 97, 0.8);
   color: white;
   font-family: var.$font-poppins;
   padding: 3rem 15rem;
