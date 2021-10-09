@@ -2,9 +2,7 @@
 @use "../../styles/mixins.scss" as mixins;
 
 .academiesMain {
-  // background: var.$navy-light;
   background-color: var.$primary-dark;
-  //   color: var.$logo-blue-dark;
   color: white;
   font-family: var.$font-poppins;
   padding: 3rem 15rem;
@@ -90,10 +88,8 @@
 }
 
 .academyBtn {
-  //   background-color: var.$light-gray;
   background-color: white;
   color: var.$logo-blue-dark;
-  //   border: 2px solid white;
   border: none;
   border-bottom: 4px solid white;
   margin: 0;
@@ -104,13 +100,6 @@
   height: fit-content;
   cursor: pointer;
   transition: 0.3s ease;
-  //   background: var.$navy-light;
-  //   border: 0.15rem solid var.$logo-blue-dark;
-  //   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.2);
-  //   border-radius: 0.4rem;
-  //   margin-right: 2rem;
-  //   margin-bottom: 1.5rem;
-  //   margin-top: 2rem;
 
   //   @include mixins.breakpoint(tablet) {
   //     // font-size: 1.5rem;
@@ -134,8 +123,6 @@
   background: #a9d1ff;
   color: var.$logo-blue-dark;
   border-bottom: 4px solid var.$primary-light;
-
-  //   border: 0.15rem solid var.$logo-blue-dark;
 
   //   @include mixins.breakpoint(mobileonly) {
   //     border: 2px solid var.$logo-blue-dark;

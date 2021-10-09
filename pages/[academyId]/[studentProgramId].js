@@ -28,9 +28,6 @@ const AcademyPage = props => {
     );
   }, [router.asPath]);
 
-  console.log(router);
-  console.log(selectedAcademy.id);
-
   return (
     <div>
       <Head>

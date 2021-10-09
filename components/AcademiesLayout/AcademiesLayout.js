@@ -78,11 +78,11 @@ const AcademiesLayout = props => {
             </div>
           </div>
 
-          <AccordionApp
+          {/* <AccordionApp
             academy={academy}
             isModalOpen={isModalOpen}
             toggleModal={toggleModal}
-          />
+          /> */}
 
           {/* <ExpansionPanel
             title="Competencies"
@@ -114,6 +114,13 @@ const AcademiesLayout = props => {
             </div>
           </CompetenciesBox>
 
+          <div className={classes.jobDiv}>
+            <h2>Job Opportunities:</h2>
+            {academy.job_opportunities.split(",").map(job => (
+              <li key={job}>{job}</li>
+            ))}
+          </div>
+
           {/* <h2 className={classes.competenciesTitle}>Competencies</h2>
 
 
@@ -129,51 +136,54 @@ const AcademiesLayout = props => {
           </div> */}
           <br />
 
-          <h2 className={classes.h2Tag}>Discounts for early registration</h2>
-
-          <div className={classes.tableDiv}>
-            <table className={classes.priceTable}>
-              <thead>
-                <tr className={classes.tableRow}>
-                  <th className={classes.tableHeader}>Type of Payment</th>
-                  <th className={classes.tableHeader}>April 1st</th>
-                  <th className={classes.tableHeader}>May 15th</th>
-                  <th className={classes.tableHeader}>July 15th</th>
-                  <th className={classes.tableHeader}>September 15th</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className={classes.tableRow}>
-                  <td className={classes.tableCell}>
-                    Discount for payment up to "x" installments
-                  </td>
-                  <td className={classes.tableCell}>400&euro;</td>
-                  <td className={classes.tableCell}>250&euro;</td>
-                  <td className={classes.tableCell}>100&euro;</td>
-                  <td className={classes.tableCell}>none</td>
-                </tr>
-                <tr className={classes.tableRow}>
-                  <td className={classes.tableCell}>Cash Payment</td>
-                  <td className={classes.tableCell}>500&euro;</td>
-                  <td className={classes.tableCell}>350&euro;</td>
-                  <td className={classes.tableCell}>200&euro;</td>
-                  <td className={classes.tableCell}>200&euro;</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className={classes.termsDiv}>
-            <h2 className={classes.h2Tag}>
-              Terms and documents for registration
-            </h2>
-            <p className={classes.pTag}>
-              Anyone who has completed at least High school can enroll at the
-              Academies.
-              <br />
-              For enrollment at the Academy the prospective students should fill
-              Application for registration and sign a Contract on tuition.
-            </p>
+          <div className={classes.registrationContainer}>
+            <div className={classes.termsDiv}>
+              <h2 className={classes.h2Tag}>
+                Terms and documents for registration
+              </h2>
+              <p className={classes.pTag}>
+                Anyone who has completed at least High school can enroll at the
+                Academies.
+                <br />
+                For enrollment at the Academy the prospective students should
+                fill Application for registration and sign a Contract on
+                tuition.
+              </p>
+            </div>
+            <div className={classes.tableDiv}>
+              <h2 className={classes.h2Tag}>
+                Discounts for early registration
+              </h2>
+              <table className={classes.priceTable}>
+                <thead>
+                  <tr className={classes.tableRow}>
+                    <th className={classes.tableHeader}>Type of Payment</th>
+                    <th className={classes.tableHeader}>April 1st</th>
+                    <th className={classes.tableHeader}>May 15th</th>
+                    <th className={classes.tableHeader}>July 15th</th>
+                    <th className={classes.tableHeader}>Sept 15th</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className={classes.tableRow}>
+                    <td className={classes.tableCell}>
+                      Discount for payment up to "x" installments
+                    </td>
+                    <td className={classes.tableCell}>400&euro;</td>
+                    <td className={classes.tableCell}>250&euro;</td>
+                    <td className={classes.tableCell}>100&euro;</td>
+                    <td className={classes.tableCell}>none</td>
+                  </tr>
+                  <tr className={classes.tableRow}>
+                    <td className={classes.tableCell}>Cash Payment</td>
+                    <td className={classes.tableCell}>500&euro;</td>
+                    <td className={classes.tableCell}>350&euro;</td>
+                    <td className={classes.tableCell}>200&euro;</td>
+                    <td className={classes.tableCell}>200&euro;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div className={classes.programDiv}>
@@ -216,13 +226,6 @@ const AcademiesLayout = props => {
               student, 50&euro; reward for the alumni member
             </h3>
           </div> */}
-
-          <div className={classes.jobDiv}>
-            <h2>Job Opportunities:</h2>
-            {academy.job_opportunities.split(",").map(job => (
-              <li key={job}>{job}</li>
-            ))}
-          </div>
 
           {/* <div className={classes.trainersDiv}>
                         <h2>Trainers:</h2>

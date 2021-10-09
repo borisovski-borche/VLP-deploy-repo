@@ -20,7 +20,7 @@ const CompetenciesBox = ({ children }) => {
           type="button"
           onClick={e => setIsExpanded(!isExpanded)}
         >
-          {isExpanded ? "Hide" : "Show More"}
+          {isExpanded ? "Hide More" : "Show More"}
         </button>
       </div>
     </div>
