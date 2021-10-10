@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import AcademyCarousel from "../AcademyCarousel/AcademyCarousel";
 import CompetenciesBox from "../CompetenciesBox/CompetenciesBox";
 import AccordionApp from "../Layout/Accordion/AccordionApp";
 import ExpansionPanel from "../UI/ExpansionPanel/ExpansionPanel";
@@ -114,12 +115,21 @@ const AcademiesLayout = props => {
             </div>
           </CompetenciesBox>
 
-          <div className={classes.jobDiv}>
-            <h2>Job Opportunities:</h2>
-            {academy.job_opportunities.split(",").map(job => (
-              <li key={job}>{job}</li>
-            ))}
-          </div>
+          <AcademyCarousel academyData={academy} />
+          {/* 
+          <div className={classes.jobsContainer}>
+            <div className={classes.jobDiv}>
+              <h2>Job Opportunities:</h2>
+              {academy.job_opportunities.split(",").map(job => (
+                <li key={job}>{job}</li>
+              ))}
+            </div>
+
+            <div className={classes.trainersDiv}>
+              <h2>Trainers:</h2>
+              <p>{academy.trainers}</p>
+            </div>
+          </div> */}
 
           {/* <h2 className={classes.competenciesTitle}>Competencies</h2>
 
@@ -149,6 +159,9 @@ const AcademiesLayout = props => {
                 fill Application for registration and sign a Contract on
                 tuition.
               </p>
+              <h2 className={classes.h2Tag}>Scholarship opportunities</h2>
+              <p>Challenge Day(mid of June)</p>
+              <p>6 full/ 10 half Scholarships (based on a competition)</p>
             </div>
             <div className={classes.tableDiv}>
               <h2 className={classes.h2Tag}>
@@ -211,12 +224,12 @@ const AcademiesLayout = props => {
             </p>
           </div>
 
-          <div className={classes.scholarshipDiv}>
+          {/* <div className={classes.scholarshipDiv}>
             <h2 className={classes.h2Tag}>Scholarship opportunities</h2>
 
             <p>Challenge Day(mid of June)</p>
             <p>6 full/ 10 half Scholarships (based on a competition)</p>
-          </div>
+          </div> */}
 
           {/* <div className={classes.referralProgramDiv}>
             <h2 className={classes.h2Tag}>Program package includes</h2>
@@ -226,11 +239,6 @@ const AcademiesLayout = props => {
               student, 50&euro; reward for the alumni member
             </h3>
           </div> */}
-
-          {/* <div className={classes.trainersDiv}>
-                        <h2>Trainers:</h2>
-                        <p>{academy.trainers}</p>
-                    </div> */}
         </div>
       )}
     </Fragment>

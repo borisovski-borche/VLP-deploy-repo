@@ -199,7 +199,7 @@
     // font-family: var.$font-open-sans;
     display: flex;
     margin-top: 3rem;
-    height: 300px;
+    height: 325px;
   }
 
   .priceTable {
@@ -309,18 +309,45 @@
   }
 
   .jobDiv {
-    margin-top: 3rem;
+    // margin-top: 3rem;
     padding: 1.6rem 4rem;
     padding-bottom: 3rem;
     // border-radius: 0.4rem;
+    border-right: 3px solid var.$light-gray;
+    width: 50%;
+    font-size: 1.6rem;
     background: var.$logo-blue-dark;
     color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    li {
+      font-size: 1.8rem;
+    }
 
     @include mixins.breakpoint(mobileonly) {
       font-size: 1.3rem;
       margin-top: 0.8rem;
     }
+  }
+}
+
+.jobsContainer {
+  margin-top: 3rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+}
+
+.test {
+  color: #00000021;
+}
+
+.trainersDiv {
+  background: var.$primary;
+  color: var.$light-gray;
+  width: 50%;
+  padding: 1rem 3rem;
+
+  p {
+    font-size: 1.8rem;
   }
 }
 
