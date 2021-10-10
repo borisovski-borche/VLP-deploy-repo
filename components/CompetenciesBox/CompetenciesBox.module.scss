@@ -2,10 +2,14 @@
 
 .dataBox {
   //   transition: 0.3s;
-  max-height: 200px;
+  max-height: 220px;
   overflow: hidden;
 }
 
+.competenciesHeading {
+  font-size: 3rem;
+  font-weight: 400;
+}
 .open {
   transition: 1.5s;
   max-height: 5000px;
@@ -13,7 +17,7 @@
 
 .close {
   transition: 0.1s;
-  max-height: 200px;
+  max-height: 230px;
 }
 
 .showMoreBtn {

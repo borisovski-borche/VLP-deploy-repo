@@ -51,7 +51,6 @@ const AcademiesLayout = props => {
 
           <div className={classes.courseInfoDiv}>
             <div className={classes.aboutCourseDiv}>
-              <h2>About this course</h2>
               <p>{academy.overview}</p>
             </div>
 
@@ -101,6 +100,7 @@ const AcademiesLayout = props => {
               ))}
             </div>
           </ExpansionPanel> */}
+          <AcademyCarousel academyData={academy} />
 
           <CompetenciesBox>
             <div className={classes.competenciesList}>
@@ -115,7 +115,6 @@ const AcademiesLayout = props => {
             </div>
           </CompetenciesBox>
 
-          <AcademyCarousel academyData={academy} />
           {/* 
           <div className={classes.jobsContainer}>
             <div className={classes.jobDiv}>

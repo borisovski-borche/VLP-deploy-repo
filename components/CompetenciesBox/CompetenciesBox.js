@@ -6,7 +6,7 @@ const CompetenciesBox = ({ children }) => {
 
   return (
     <div>
-      <h2>Competencies</h2>
+      <h2 className={classes.competenciesHeading}>Competencies</h2>
       <div
         className={`${classes.dataBox} ${
           isExpanded ? classes.open : classes.close
