@@ -33,7 +33,21 @@ const AcademyCarousel = ({ academyData }) => {
     );
   });
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (dataList.length === 1) return;
+    const interval = setInterval(() => {
+      if (counter === -dataList.length + 1) {
+        setCounter(0);
+        return;
+      }
+
+      setCounter(counter - 1);
+    }, 15000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [counter]);
 
   const slideJsx = dataList
     .map(item => {
