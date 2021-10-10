@@ -2,7 +2,7 @@
 @use "../../styles/mixins.scss" as mixins;
 
 .academiesMain {
-  background-color: var.$primary-dark;
+  background: rgba(0, 42, 126, 0.75);
   color: white;
   font-family: var.$font-poppins;
   padding: 3rem 15rem;
@@ -12,10 +12,21 @@
   }
 }
 
+.wrapperContainer {
+  margin-top: 13rem;
+}
+
 .backToHome {
   margin: 1.2rem;
+  margin-top: 10rem;
   padding-left: 0.5rem;
   font-size: 1.8rem;
+  transition: 0.3s ease-in-out;
+
+  svg {
+    margin-right: 1rem;
+    padding-top: 0.2rem;
+  }
 
   @include mixins.breakpoint(tablet) {
     margin: 0.2em;
@@ -30,6 +41,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 17rem;
+  height: 3rem;
   cursor: pointer;
 
   @include mixins.breakpoint(mobileonly) {
@@ -38,7 +51,7 @@
 }
 
 .backDiv:hover {
-  color: #718dad;
+  color: var.$navy-medium;
 }
 
 .academyTitleDiv {
@@ -61,7 +74,7 @@
 .title {
   font-family: var.$font-open-sans;
   font-size: 6.7rem;
-  width: 40%;
+  width: 60%;
   font-weight: 300;
   margin-left: 2rem;
 

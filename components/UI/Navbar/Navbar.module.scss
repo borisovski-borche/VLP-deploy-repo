@@ -1,0 +1,84 @@
+@use "../../../styles/mixins.scss" as mixins;
+@use "../../../styles//variables.scss" as var;
+
+.navbar {
+  height: 5.5rem;
+  width: 110rem;
+  background-color: var.$navy-dark;
+  position: absolute;
+  right: 0;
+  top: 6.5rem;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.navbar__nav {
+  height: 5.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .navbar__item {
+    height: calc(6rem * 0.6);
+    padding: 1rem;
+    font-family: var.$font-poppins;
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    &:first-child {
+      margin-left: 0.5rem;
+    }
+
+    .navbar__arrow {
+      margin-left: 0.4rem;
+      margin-top: 0.2rem;
+      filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(25deg)
+        brightness(103%) contrast(102%);
+      display: flex;
+      align-self: center;
+      width: 1.2rem;
+    }
+  }
+  .navbar__item:hover {
+    background-color: var.$primary-dark;
+    border-radius: 0.4rem;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 6rem;
+  width: 300px;
+  background-color: var.$navy-dark;
+  padding: 1rem;
+  overflow: hidden;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.dropdown > ul > li {
+  text-transform: uppercase;
+  margin: 0.6rem 0;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+
+  &:hover {
+    color: var.$primary-light;
+  }
+}

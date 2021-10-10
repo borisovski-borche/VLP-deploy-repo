@@ -23,11 +23,9 @@
   }
 }
 
-
-@mixin scrollbars($size,  $sizeh, $foreground-color, $background-color) {
-  
+@mixin scrollbars($size, $sizeh, $foreground-color, $background-color) {
   &::-webkit-scrollbar {
-    width:  $size;
+    width: $size;
     height: $sizeh;
   }
 

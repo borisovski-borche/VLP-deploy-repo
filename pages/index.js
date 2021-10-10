@@ -14,10 +14,7 @@ export default function HomePage(props) {
   return (
     <Fragment>
       <Head>
-        <script
-          src="https://kit.fontawesome.com/d32ad62e17.js"
-          crossorigin="anonymous"
-        ></script>
+        <link rel="icon" type="image/png" href="/img/sedc-logo.png" />
         <title>SEDC - Academies</title>
       </Head>
       <div>
