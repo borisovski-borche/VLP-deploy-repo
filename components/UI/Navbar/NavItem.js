@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import classes from "./Navbar.module.scss";
-import useClickOutside from "./Hooks/useClickOutside";
+import useClickOutside from "./hooks/useClickOutside";
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
-  let elRef = useClickOutside(() => {
-    setOpen(false);
-  });
+  let elRef = useClickOutside(() => setOpen(false));
 
   return (
     <li ref={elRef}>

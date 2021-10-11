@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 
 const useClickOutside = passedHandler => {
   let elRef = useRef();
-
   useEffect(() => {
     let handler = event => {
       if (!elRef.current.contains(event.target)) {
