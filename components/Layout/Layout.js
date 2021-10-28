@@ -1,8 +1,9 @@
 import { Fragment } from "react";
 import CompanyLogo from "../UI/CompanyLogo/CompanyLogo";
 import Navbar from "../UI/Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <Fragment>
       <header>
@@ -10,9 +11,7 @@ const Layout = props => {
         <Navbar />
       </header>
       <main>{props.children}</main>
-      {/* <footer>
-        <h3>FOOTER PLACEHOLDER</h3>
-      </footer> */}
+      <Footer />
     </Fragment>
   );
 };
