@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import classes from "./Navbar.module.scss";
+import useClickOutside from "./Hooks/useClickOutside";
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
+  let elRef = useClickOutside(() => setOpen(false));
 
   return (
-    <li>
+    <li ref={elRef}>
       <span className={classes.navbar__item} onClick={() => setOpen(!open)}>
         {props.item}
         {props.item === "facility use" || props.item === "contact" ? (

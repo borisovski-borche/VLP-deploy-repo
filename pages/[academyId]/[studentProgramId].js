@@ -7,6 +7,7 @@ import axios from "axios";
 
 import Link from "next/link";
 import AcademiesLayout from "../../components/AcademiesLayout/AcademiesLayout";
+import BackToTop from "../../components/UI/BackToTop/BackToTop";
 import classes from "./studentProgramId.module.scss";
 
 const AcademyPage = props => {
@@ -100,6 +101,7 @@ const AcademyPage = props => {
           />
           {/* <button onClick={toggleModal} type="button"> Read More </button> */}
           {/* {isModalOpen && <Modal onRequestClose={toggleModal} />}   */}
+          <BackToTop />
         </div>
       </main>
     </div>
