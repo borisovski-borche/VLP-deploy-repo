@@ -42,7 +42,7 @@ const AcademyCarousel = ({ academyData }) => {
       }
 
       setCounter(counter - 1);
-    }, 15000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
