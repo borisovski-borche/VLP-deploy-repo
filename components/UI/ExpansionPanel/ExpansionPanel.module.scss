@@ -4,11 +4,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 2.2rem;
   font-family: var.$font-open-sans;
 
   h3 {
     font-weight: 400;
+    font-size: 3rem;
   }
 
   h3:hover {
@@ -45,9 +45,9 @@
 }
 
 .chevronUp {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
 }
 
 .chevronDown {
-  transform: rotate(0);
+  transform: rotate(0deg);
 }

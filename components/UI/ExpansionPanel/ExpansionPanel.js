@@ -21,7 +21,7 @@ const ExpansionPanel = ({ title, summary, children, startingHeight }) => {
             height="20"
             fill="currentColor"
             className="bi bi-chevron-down"
-            classname={`bi bi-chevron-down ${
+            className={`bi bi-chevron-down ${
               isOpen ? classes.chevronUp : classes.chevronDown
             }`}
             viewBox="0 0 16 16"

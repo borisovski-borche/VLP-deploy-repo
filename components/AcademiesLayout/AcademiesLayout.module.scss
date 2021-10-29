@@ -7,14 +7,10 @@
   color: var.$logo-blue-dark;
   border-top: 1px solid var.$dark-gray;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  // border-radius: 0.4rem;
   font-family: var.$font-open-sans;
   padding: 1rem 6rem;
-  // margin-top: 2rem;
   padding-bottom: 4rem;
-  // margin: 3rem 6rem;
 
-  
   @include mixins.breakpoint(mobileonly) {
     border: 0.2rem solid var.$logo-blue-dark;
     padding: 1rem 2rem;
@@ -82,8 +78,6 @@
   .courseInfoDiv {
     display: flex;
     justify-content: space-between;
-    // align-items: center;
-    // align-items: flex-start;
     margin: 2rem auto;
 
     @include mixins.breakpoint(mobileonly) {
@@ -93,8 +87,6 @@
 
   .aboutCourseDiv {
     width: 55%;
-    // padding: 1rem 3rem;
-    // padding-right: 8rem;
     font-size: 1.8rem;
 
     @include mixins.breakpoint(mobileonly) {
@@ -107,17 +99,11 @@
   .timelineDiv {
     min-width: 40%;
     max-width: 50%;
-    // width: 35%;
-    // height: inherit;
-    // background: var.$logo-blue-dark;
     background-color: var.$logo-blue-dark;
     color: white;
     padding: 1rem 4rem;
-    // margin-top: 4rem;
     margin-top: 2rem;
     margin-left: 2rem;
-    // margin-right: 5rem;
-    // border-radius: 0.4rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
     @include mixins.breakpoint(mobileonly) {
@@ -179,10 +165,6 @@
     width: 50%;
     padding: 0rem 4rem;
 
-    // border-radius: 0.4rem;
-    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    // border-left: 0.1rem solid var.$logo-blue-dark;
-    // border-right: 0.1rem solid var.$logo-blue-dark;
     @include mixins.scrollbars(
       10rem,
       0.8rem,
@@ -202,7 +184,6 @@
 
   .registrationContainer {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    // font-family: var.$font-open-sans;
     display: flex;
     margin-top: 3rem;
     height: 400px;
@@ -215,7 +196,6 @@
     border-collapse: collapse;
     font-weight: 400;
     width: 100%;
-    // height: 100%;
 
     @include mixins.breakpoint(mobileonly) {
       font-size: 1.3rem;
@@ -223,9 +203,6 @@
   }
 
   .tableRow {
-    // border-top: 0.1rem solid var.$logo-blue-dark;
-    // border-bottom: 0.1rem solid var.$logo-blue-dark;
-
     td:nth-child(5) {
       border-right: none;
     }
@@ -236,7 +213,6 @@
   }
 
   .tableHeader {
-    // background: var.$navy-light;
     background-color: var.$light-gray;
     padding: 1rem;
     border-right: 0.1rem solid var.$logo-blue-dark;
@@ -250,15 +226,11 @@
   }
 
   .termsDiv {
-    // margin-top: 5rem;
     padding: 0rem 4rem;
     border-right: 2px solid var.$primary-dark;
     width: 50%;
     height: 100%;
-    // border: 0.1rem solid var.$logo-blue-dark;
-    // border-radius: 0.4rem;
     background: var.$light-gray;
-    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
   .programDiv {
@@ -285,8 +257,6 @@
     margin-top: 2rem;
     margin-bottom: 4rem;
     padding: 1.6rem 4rem;
-    // border: 0.1rem solid var.$logo-blue-dark;
-    // border-radius: 0.4rem;
     background: var.$navy-light;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -303,8 +273,6 @@
   .referralProgramDiv {
     padding: 1.6rem;
     margin: 3rem auto;
-    // border-radius: 0.4rem;
-    // border: 0.1rem solid var.$logo-blue-dark;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
     @include mixins.breakpoint(mobileonly) {
@@ -316,10 +284,8 @@
   }
 
   .jobDiv {
-    // margin-top: 3rem;
     padding: 1.6rem 4rem;
     padding-bottom: 3rem;
-    // border-radius: 0.4rem;
     border-right: 3px solid var.$light-gray;
     width: 50%;
     font-size: 1.6rem;

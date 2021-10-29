@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import AcademyCarousel from "../AcademyCarousel/AcademyCarousel";
 import CompetenciesBox from "../CompetenciesBox/CompetenciesBox";
-import AccordionApp from "../Layout/Accordion/AccordionApp";
 import ExpansionPanel from "../UI/ExpansionPanel/ExpansionPanel";
 import classes from "./AcademiesLayout.module.scss";
 
@@ -84,23 +83,15 @@ const AcademiesLayout = props => {
             toggleModal={toggleModal}
           /> */}
 
-          {/* <ExpansionPanel
-            title="Competencies"
+          <AcademyCarousel academyData={academy} />
+
+          <ExpansionPanel
+            title="Study Program"
             summary=""
             startingHeight="200px"
           >
-            <div className={classes.competenciesList}>
-              {academy.competencies.list_data.map((data, i) => (
-                <div key={i}>
-                  <span className={classes.checkSign}></span>
-                  <li key={i} className={classes.competenciesListItem}>
-                    {data}
-                  </li>
-                </div>
-              ))}
-            </div>
-          </ExpansionPanel> */}
-          <AcademyCarousel academyData={academy} />
+            <div>Cards Placeholder</div>
+          </ExpansionPanel>
 
           <CompetenciesBox>
             <div className={classes.competenciesList}>
@@ -115,34 +106,6 @@ const AcademiesLayout = props => {
             </div>
           </CompetenciesBox>
 
-          {/* 
-          <div className={classes.jobsContainer}>
-            <div className={classes.jobDiv}>
-              <h2>Job Opportunities:</h2>
-              {academy.job_opportunities.split(",").map(job => (
-                <li key={job}>{job}</li>
-              ))}
-            </div>
-
-            <div className={classes.trainersDiv}>
-              <h2>Trainers:</h2>
-              <p>{academy.trainers}</p>
-            </div>
-          </div> */}
-
-          {/* <h2 className={classes.competenciesTitle}>Competencies</h2>
-
-
-          <div className={classes.competenciesList}>
-            {academy.competencies.list_data.map((data, i) => (
-              <div key={i}>
-                <span className={classes.checkSign}></span>
-                <li key={i} className={classes.competenciesListItem}>
-                  {data}
-                </li>
-              </div>
-            ))}
-          </div> */}
           <br />
 
           <div className={classes.registrationContainer}>
@@ -222,22 +185,6 @@ const AcademiesLayout = props => {
               with Industry
             </p>
           </div>
-
-          {/* <div className={classes.scholarshipDiv}>
-            <h2 className={classes.h2Tag}>Scholarship opportunities</h2>
-
-            <p>Challenge Day(mid of June)</p>
-            <p>6 full/ 10 half Scholarships (based on a competition)</p>
-          </div> */}
-
-          {/* <div className={classes.referralProgramDiv}>
-            <h2 className={classes.h2Tag}>Program package includes</h2>
-
-            <h3>
-              Referral Program: 50&euro; additional discount for the new
-              student, 50&euro; reward for the alumni member
-            </h3>
-          </div> */}
         </div>
       )}
     </Fragment>

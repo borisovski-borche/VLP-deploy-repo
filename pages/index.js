@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-
 import Card from "../components/Card/Card";
-import AccordionApp from "../components/Layout/Accordion/AccordionApp";
 
 import classes from "../styles/HomePage.module.scss";
 
@@ -49,18 +47,11 @@ export default function HomePage(props) {
             Available academies
           </h1>
           <div className={classes.academyCardContainer}>
-            {academies.map((academy) => (
-              
-              <Card  academy={academy} />
-              
+            {academies.map(academy => (
+              <Card academy={academy} key={academy.id} />
             ))}
           </div>
-          <div className={classes.copyrightTextContainer}>
-            <small>
-              &copy; 2021. All rights reserved. Seavus Education and Development
-              Center
-            </small>
-          </div>
+          <div className={classes.copyrightTextContainer}></div>
         </div>
       </div>
     </Fragment>
