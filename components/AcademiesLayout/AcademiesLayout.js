@@ -1,8 +1,47 @@
 import { Fragment } from "react";
 import AcademyCarousel from "../AcademyCarousel/AcademyCarousel";
 import CompetenciesBox from "../CompetenciesBox/CompetenciesBox";
+import SubjectCard from "../SubjectCard/SubjectCard";
 import ExpansionPanel from "../UI/ExpansionPanel/ExpansionPanel";
 import classes from "./AcademiesLayout.module.scss";
+
+const placeholderAcademyData = [
+  {
+    title: "Basic Programming Principles and Methodologies",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    learningPath: ["Test", "Test02", "Tes03", "Test04", "Test05", "Test06"],
+    furtherReadingLinks: [
+      "http://www.google.com",
+      "https://developer.mozilla.org/en-US/",
+      "https://en.wikipedia.org/wiki/HTML",
+    ],
+  },
+  {
+    title: "Basic Web Development (HTML5/CSS3)",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    learningPath: ["Test", "Test02", "Tes03", "Test04", "Test05", "Test06"],
+    furtherReadingLinks: [
+      "http://www.google.com",
+      "https://developer.mozilla.org/en-US/",
+      "https://en.wikipedia.org/wiki/JavaScript",
+    ],
+  },
+  { title: "Basic JavaScript Development" },
+  { title: "Advanced JavaScript Development" },
+  { title: "OOP Programming with C#" },
+  { title: "Advanced C# development" },
+  { title: "Relational database development & design" },
+  { title: "Developing ASP.NET Web Applications" },
+  { title: "RESTful Web Services Development" },
+  { title: "Advanced Data-Driven Applications Development" },
+  { title: "Software debugging and testing" },
+  { title: "Developing Cloud-ready Applications" },
+  { title: "C# Server Development" },
+  { title: "AngularJS with TypeScript" },
+  { title: "MEAN/MERN Development" },
+];
 
 const AcademiesLayout = props => {
   const { academy, isModalOpen, toggleModal } = props;
@@ -88,9 +127,13 @@ const AcademiesLayout = props => {
           <ExpansionPanel
             title="Study Program"
             summary=""
-            startingHeight="200px"
+            startingHeight="526px"
           >
-            <div>Cards Placeholder</div>
+            <div className={classes.subjectCardContainer}>
+              {placeholderAcademyData.map(subject => (
+                <SubjectCard key={subject.title} cardData={subject} />
+              ))}
+            </div>
           </ExpansionPanel>
 
           <CompetenciesBox>

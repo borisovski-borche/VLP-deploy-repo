@@ -6,6 +6,7 @@
   color: white;
   font-family: var.$font-poppins;
   padding: 3rem 15rem;
+  padding-bottom: 6rem;
 
   @include mixins.breakpoint(mobileonly) {
     padding: 1.5rem 3rem;

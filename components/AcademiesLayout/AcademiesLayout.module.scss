@@ -17,6 +17,14 @@
     padding-bottom: 2rem;
   }
 
+  .subjectCardContainer {
+    display: flex;
+    // padding-bottom: 5rem;
+    justify-content: space-between;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+  }
+
   .headingContent {
     display: flex;
     justify-content: space-between;
