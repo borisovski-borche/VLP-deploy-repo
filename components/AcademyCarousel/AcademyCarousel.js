@@ -79,6 +79,7 @@ const AcademyCarousel = ({ academyData }) => {
         >
           <Image
             src={`/img/carousel/${item}.jpg`}
+            alt={item}
             height="500px"
             width="888px"
             // layout="fill"

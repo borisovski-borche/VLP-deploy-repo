@@ -131,8 +131,11 @@
   }
 
   .competenciesList {
+    list-style: none;
     list-style-type: none;
+    margin: 0;
     margin-left: 1rem;
+    padding-left: 0;
   }
 
   .competenciesListItem {

@@ -137,16 +137,16 @@ const AcademiesLayout = props => {
           </ExpansionPanel>
 
           <CompetenciesBox>
-            <div className={classes.competenciesList}>
+            <ul className={classes.competenciesList}>
               {academy.competencies.list_data.map((data, i) => (
-                <div key={i}>
+                <li key={i}>
                   <span className={classes.checkSign}></span>
-                  <li key={i} className={classes.competenciesListItem}>
+                  <div key={i} className={classes.competenciesListItem}>
                     {data}
-                  </li>
-                </div>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </CompetenciesBox>
 
           <br />

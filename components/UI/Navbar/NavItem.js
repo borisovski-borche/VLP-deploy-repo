@@ -16,6 +16,7 @@ function NavItem(props) {
         ) : (
           <img
             src="/img/caret-down-fill.svg"
+            alt="open submenu down arrow"
             className={classes.navbar__arrow}
           />
         )}
