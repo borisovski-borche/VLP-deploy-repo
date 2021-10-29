@@ -7,9 +7,9 @@ const ExpansionPanel = ({ title, summary, children, startingHeight }) => {
   return (
     <div>
       <div className={classes.panelHeading} onClick={e => setIsOpen(!isOpen)}>
-        <h3>
+        <h2>
           {title} {summary}
-        </h3>
+        </h2>
         <div
           className={`${classes.chevron} ${
             isOpen ? classes.chevronUp : classes.chevronDown

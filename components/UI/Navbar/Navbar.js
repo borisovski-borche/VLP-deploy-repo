@@ -12,20 +12,24 @@ function Navbar() {
         <NavItem item="courses" linkData={linkData.coursesItems} />
         <NavItem item="accelerator" linkData={linkData.acceleratorItems} />
         <NavItem item="testing" linkData={linkData.testingItems} />
-        <a
-          href="https://www.sedc.mk/facilty-use/"
-          target="_blank"
-          className={classes.navbar__item}
-        >
-          facility use
-        </a>
-        <a
-          href="https://www.sedc.mk/contact-us/"
-          target="_blank"
-          className={classes.navbar__item}
-        >
-          contact
-        </a>
+        <li>
+          <a
+            href="https://www.sedc.mk/facilty-use/"
+            // target="_blank"
+            className={classes.navbar__item}
+          >
+            facility use
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.sedc.mk/contact-us/"
+            // target="_blank"
+            className={classes.navbar__item}
+          >
+            contact
+          </a>
+        </li>
       </ul>
     </nav>
   );

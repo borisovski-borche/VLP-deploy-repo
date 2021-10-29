@@ -7,9 +7,7 @@ function Dropdown(props) {
       <ul>
         {props.subitem.map(subitem => (
           <li>
-            <a href={subitem.target} target="_blank">
-              {subitem.linkTitle}
-            </a>
+            <a href={subitem.target}>{subitem.linkTitle}</a>
           </li>
         ))}
       </ul>
