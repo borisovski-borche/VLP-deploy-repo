@@ -8,7 +8,7 @@ import axios from "axios";
 import Link from "next/link";
 import AcademiesLayout from "../../components/AcademiesLayout/AcademiesLayout";
 import BackToTop from "../../components/UI/BackToTop/BackToTop";
-import classes from "./studentProgramId.module.scss";
+import classes from "../../styles/studentProgramId.module.scss";
 
 const AcademyPage = props => {
   const router = useRouter();
