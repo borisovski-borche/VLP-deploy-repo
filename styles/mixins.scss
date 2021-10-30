@@ -16,7 +16,7 @@
     @media (min-width: 1024px) {
       @content;
     }
-  } @else if $point == tv {
+  } @else if $point == largedesktop {
     @media (min-width: 1200px) {
       @content;
     }

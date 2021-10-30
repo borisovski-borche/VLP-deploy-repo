@@ -54,32 +54,32 @@ const AcademiesLayout = props => {
         <div className={classes.academyContainer}>
           <h2 className={classes.title}>{academy.title}</h2>
 
-          <div className={classes.icons}>
-            <div className={classes.iconsDiv}>
+          <div className={classes.iconsContainer}>
+            <div className={classes.iconBox}>
               <img
                 className={classes.moneyIcon}
                 src="/img/money-icon.svg"
-                alt=""
+                alt="wallet icon"
               />
               <span className={classes.iconSpan}>{academy.price} &euro;</span>
             </div>
 
-            <div className={classes.iconsDiv}>
+            <div className={classes.iconBox}>
               <img
                 className={classes.calendarIcon}
                 src="/img/calendar-icon.svg"
-                alt=""
+                alt="calendar icon"
               />
               <span className={classes.iconSpan}>
                 {academy.timeline?.duration}
               </span>
             </div>
 
-            <div className={classes.iconsDiv}>
+            <div className={classes.iconBox}>
               <img
                 className={classes.timeIcon}
                 src="/img/time-icon.svg"
-                alt=""
+                alt="clock icon"
               />
               <span className={classes.iconSpan}>
                 {academy.timeline?.classes}
@@ -107,20 +107,9 @@ const AcademiesLayout = props => {
                   </div>
                 );
               })}
-
-              {/* {academy.timeline?.semesters.map(data =>
-                data.list_data.map((list, i) => <li key={i}>{list}</li>)
-              )} */}
-
               <p>{academy.timeline?.lectures}</p>
             </div>
           </div>
-
-          {/* <AccordionApp
-            academy={academy}
-            isModalOpen={isModalOpen}
-            toggleModal={toggleModal}
-          /> */}
 
           <AcademyCarousel academyData={academy} />
 
@@ -204,9 +193,8 @@ const AcademiesLayout = props => {
             </div>
           </div>
 
-          <div className={classes.programDiv}>
+          <div className={classes.programContainer}>
             <h2 className={classes.h2Tag}>Program package includes</h2>
-
             <span className={classes.checkSign}></span>
             <p>Learning materials</p>
             <span className={classes.checkSign}></span>

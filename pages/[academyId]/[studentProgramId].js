@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -30,12 +30,12 @@ const AcademyPage = props => {
   }, [router.asPath]);
 
   return (
-    <div>
+    <Fragment>
       <Head>
         <link rel="icon" type="image/png" href="/img/sedc-logo.png" />
         <title>SEDC - {selectedAcademy.title}</title>
       </Head>
-      <main className={classes.academiesMain}>
+      <div className={classes.academiesMain}>
         <div className={classes.wrapperContainer}>
           <Link href={`/`}>
             <div className={classes.backDiv}>
@@ -58,14 +58,8 @@ const AcademyPage = props => {
             </div>
           </Link>
           <div className={classes.academyTitleDiv}>
-            {/* <img
-            className={classes.screenIcon}
-            src={`/img/${academyData.id}.png`}
-            alt=""
-          /> */}
             <h1 className={classes.title}>{academyData.title}</h1>
           </div>
-
           <div className={classes.buttonsDiv}>
             {academyData.study_programs.map(program => (
               <button
@@ -99,12 +93,10 @@ const AcademyPage = props => {
             isModalOpen={isModalOpen}
             toggleModal={toggleModal}
           />
-          {/* <button onClick={toggleModal} type="button"> Read More </button> */}
-          {/* {isModalOpen && <Modal onRequestClose={toggleModal} />}   */}
           <BackToTop />
         </div>
-      </main>
-    </div>
+      </div>
+    </Fragment>
   );
 };
 

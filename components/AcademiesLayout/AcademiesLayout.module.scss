@@ -49,12 +49,12 @@
     }
   }
 
-  .icons {
+  .iconsContainer {
     display: flex;
     align-items: center;
   }
 
-  .iconsDiv {
+  .iconBox {
     display: flex;
     align-items: center;
     margin-top: 1rem;
@@ -244,7 +244,7 @@
     background: var.$light-gray;
   }
 
-  .programDiv {
+  .programContainer {
     padding: 1.6rem;
     margin-top: 1rem;
 
