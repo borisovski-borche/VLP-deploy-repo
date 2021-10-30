@@ -9,6 +9,7 @@ import Link from "next/link";
 import AcademiesLayout from "../../components/AcademiesLayout/AcademiesLayout";
 import BackToTop from "../../components/UI/BackToTop/BackToTop";
 import classes from "../../styles/studentProgramId.module.scss";
+import Modal from "../../components/UI/Modal/Modal";
 
 const AcademyPage = props => {
   const router = useRouter();
@@ -16,7 +17,7 @@ const AcademyPage = props => {
   const { academyData } = props;
   const [selectedAcademy, setSelectedAcademy] = useState({});
   const [isModalOpen, setModalIsOpen] = useState(false);
-
+  
   const toggleModal = () => {
     setModalIsOpen(!isModalOpen);
   };
@@ -99,8 +100,8 @@ const AcademyPage = props => {
             isModalOpen={isModalOpen}
             toggleModal={toggleModal}
           />
-          {/* <button onClick={toggleModal} type="button"> Read More </button> */}
-          {/* {isModalOpen && <Modal onRequestClose={toggleModal} />}   */}
+          <button onClick={toggleModal} type="button"> Read More </button>
+          {isModalOpen && <Modal toggleModal={toggleModal} setModalIsOpen={setModalIsOpen} />}  
           <BackToTop />
         </div>
       </main>
