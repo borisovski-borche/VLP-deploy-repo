@@ -32,29 +32,27 @@ const linkData = {
   academyItems: [
     {
       linkTitle: "academy for programming",
-      target: "http://localhost:3000/academy-for-progamming/web-dev",
+      target: "/academy-for-progamming/web-dev",
     },
     {
-      linkTitle: "academy for desing",
-      target: "http://localhost:3000/academy-for-design/web-designer",
+      linkTitle: "academy for design",
+      target: "/academy-for-design/web-designer",
     },
     {
       linkTitle: "academy for computer networks",
-      target: "http://localhost:3000/academy-for-computer-networks/cloud-ops",
+      target: "/academy-for-computer-networks/cloud-ops",
     },
     {
       linkTitle: "academy for software testing",
-      target:
-        "http://localhost:3000/academy-for-software-testing/software-tester",
+      target: "/academy-for-software-testing/software-tester",
     },
     {
       linkTitle: "academy for data science",
-      target: "http://localhost:3000/academy-for-data-science/data-scientist",
+      target: "/academy-for-data-science/data-scientist",
     },
     {
       linkTitle: "academy for digital marketing",
-      target:
-        "http://localhost:3000/academy-for-digital-marketing/digital-marketer",
+      target: "/academy-for-digital-marketing/digital-marketer",
     },
   ],
   coursesItems: [
