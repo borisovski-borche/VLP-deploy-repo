@@ -8,7 +8,11 @@ function Navbar() {
     <nav className={classes.navbar}>
       <ul className={classes.navbar__nav}>
         <NavItem item="about us" linkData={linkData.aboutUsItems} />
-        <NavItem item="academies" linkData={linkData.academyItems} />
+        <NavItem
+          item="academies"
+          nextLinks={true}
+          linkData={linkData.academyItems}
+        />
         <NavItem item="courses" linkData={linkData.coursesItems} />
         <NavItem item="accelerator" linkData={linkData.acceleratorItems} />
         <NavItem item="testing" linkData={linkData.testingItems} />
