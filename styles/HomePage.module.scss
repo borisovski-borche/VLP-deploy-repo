@@ -44,48 +44,45 @@
   color: var.$logo-blue-dark;
 }
 
-.academyCardContainer {
-  margin: 0 6rem 0 6rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-  padding-top: 3rem;
-}
-
-// .academyCard {
-//   background-color: #fff;
-//   margin: 2rem 0 4rem 0;
-//   width: 24rem;
-//   height: 28rem;
-//   border-radius: 0.4rem;
-//   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.1);
-//   color: var.$logo-blue-dark;
-//   font-size: 2rem;
-//   font-weight: bolder;
-//   font-family: var.$font-poppins;
-//   text-align: center;
+// WITH FLEXBOX
+// .academyCardContainer {
+//   margin: 0 6rem 0 6rem;
 //   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-between;
-//   cursor: pointer;
-//   padding: 2rem 0 3.5rem 0;
-//   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-//   .academyLogo {
-//     width: 16rem;
-//     transition: opacity 0.3s ease;
-//   }
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-around;
+//   align-content: center;
+//   padding-top: 3rem;
 // }
 
-// .academyCard:hover {
-//   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), 0 6px 10px rgba(0, 0, 0, 0.22);
-//   .academyLogo {
-//     color: 0.8;
-//   }
-// }
+
+//WITH GRID  
+.academyCardContainer {
+  margin: 0 6rem 0 8rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns:  repeat(2, 1fr);
+  gap: 0.5rem;
+  padding-top: 3rem;
+ 
+
+  @include mixins.breakpoint(tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  @include mixins.breakpoint(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  @include mixins.breakpoint(desktop) {
+    //margin: 0 6rem 0 6rem;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-around;
+  }
+}
 
 
 .academyRates {

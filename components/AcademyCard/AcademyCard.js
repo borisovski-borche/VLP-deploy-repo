@@ -1,7 +1,7 @@
 import Link from "next/link";
-import classes from "./Card.module.scss";
+import classes from "./AcademyCard.module.scss";
 
-const Card = (props) => {
+const AcademyCard = (props) => {
   const { academy } = props;
   const showIcon = true;
 
@@ -27,4 +27,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default AcademyCard;

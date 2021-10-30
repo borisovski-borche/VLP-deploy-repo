@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import Card from "../components/Card/Card";
+import AcademyCard from "../components/AcademyCard/AcademyCard";
 
 import classes from "../styles/HomePage.module.scss";
 
@@ -48,7 +48,7 @@ export default function HomePage(props) {
           </h1>
           <div className={classes.academyCardContainer}>
             {academies.map(academy => (
-              <Card academy={academy} key={academy.id} />
+              <AcademyCard academy={academy} key={academy.id} />
             ))}
           </div>
           <div className={classes.copyrightTextContainer}></div>
