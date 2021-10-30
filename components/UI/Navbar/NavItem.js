@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Dropdown from "./Dropdown";
 import classes from "./Navbar.module.scss";
 import useClickOutside from "./Hooks/useClickOutside";
+import { useRouter } from "next/router";
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
   let elRef = useClickOutside(() => setOpen(false));
+
+  const router = useRouter();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [router.asPath]);
 
   return (
     <li ref={elRef}>
@@ -21,7 +28,9 @@ function NavItem(props) {
           />
         )}
       </span>
-      {open && <Dropdown subitem={props.linkData} />}
+      {open && (
+        <Dropdown subitem={props.linkData} nextLinks={props.nextLinks} />
+      )}
     </li>
   );
 }
