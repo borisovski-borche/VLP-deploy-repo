@@ -1,9 +1,47 @@
 import { Fragment } from "react";
 import AcademyCarousel from "../AcademyCarousel/AcademyCarousel";
 import CompetenciesBox from "../CompetenciesBox/CompetenciesBox";
-import AccordionApp from "../Layout/Accordion/AccordionApp";
+import SubjectCard from "../SubjectCard/SubjectCard";
 import ExpansionPanel from "../UI/ExpansionPanel/ExpansionPanel";
 import classes from "./AcademiesLayout.module.scss";
+
+const placeholderAcademyData = [
+  {
+    title: "Basic Programming Principles and Methodologies",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    learningPath: ["Test", "Test02", "Tes03", "Test04", "Test05", "Test06"],
+    furtherReadingLinks: [
+      "http://www.google.com",
+      "https://developer.mozilla.org/en-US/",
+      "https://en.wikipedia.org/wiki/HTML",
+    ],
+  },
+  {
+    title: "Basic Web Development (HTML5/CSS3)",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    learningPath: ["Test", "Test02", "Tes03", "Test04", "Test05", "Test06"],
+    furtherReadingLinks: [
+      "http://www.google.com",
+      "https://developer.mozilla.org/en-US/",
+      "https://en.wikipedia.org/wiki/JavaScript",
+    ],
+  },
+  { title: "Basic JavaScript Development" },
+  { title: "Advanced JavaScript Development" },
+  { title: "OOP Programming with C#" },
+  { title: "Advanced C# development" },
+  { title: "Relational database development & design" },
+  { title: "Developing ASP.NET Web Applications" },
+  { title: "RESTful Web Services Development" },
+  { title: "Advanced Data-Driven Applications Development" },
+  { title: "Software debugging and testing" },
+  { title: "Developing Cloud-ready Applications" },
+  { title: "C# Server Development" },
+  { title: "AngularJS with TypeScript" },
+  { title: "MEAN/MERN Development" },
+];
 
 const AcademiesLayout = props => {
   const { academy, isModalOpen, toggleModal } = props;
@@ -84,65 +122,33 @@ const AcademiesLayout = props => {
             toggleModal={toggleModal}
           /> */}
 
-          {/* <ExpansionPanel
-            title="Competencies"
-            summary=""
-            startingHeight="200px"
-          >
-            <div className={classes.competenciesList}>
-              {academy.competencies.list_data.map((data, i) => (
-                <div key={i}>
-                  <span className={classes.checkSign}></span>
-                  <li key={i} className={classes.competenciesListItem}>
-                    {data}
-                  </li>
-                </div>
-              ))}
-            </div>
-          </ExpansionPanel> */}
           <AcademyCarousel academyData={academy} />
 
-          <CompetenciesBox>
-            <div className={classes.competenciesList}>
-              {academy.competencies.list_data.map((data, i) => (
-                <div key={i}>
-                  <span className={classes.checkSign}></span>
-                  <li key={i} className={classes.competenciesListItem}>
-                    {data}
-                  </li>
-                </div>
+          <ExpansionPanel
+            title="Study Program"
+            summary=""
+            startingHeight="526px"
+          >
+            <div className={classes.subjectCardContainer}>
+              {placeholderAcademyData.map(subject => (
+                <SubjectCard key={subject.title} cardData={subject} />
               ))}
             </div>
+          </ExpansionPanel>
+
+          <CompetenciesBox>
+            <ul className={classes.competenciesList}>
+              {academy.competencies.list_data.map((data, i) => (
+                <li key={i}>
+                  <span className={classes.checkSign}></span>
+                  <div key={i} className={classes.competenciesListItem}>
+                    {data}
+                  </div>
+                </li>
+              ))}
+            </ul>
           </CompetenciesBox>
 
-          {/* 
-          <div className={classes.jobsContainer}>
-            <div className={classes.jobDiv}>
-              <h2>Job Opportunities:</h2>
-              {academy.job_opportunities.split(",").map(job => (
-                <li key={job}>{job}</li>
-              ))}
-            </div>
-
-            <div className={classes.trainersDiv}>
-              <h2>Trainers:</h2>
-              <p>{academy.trainers}</p>
-            </div>
-          </div> */}
-
-          {/* <h2 className={classes.competenciesTitle}>Competencies</h2>
-
-
-          <div className={classes.competenciesList}>
-            {academy.competencies.list_data.map((data, i) => (
-              <div key={i}>
-                <span className={classes.checkSign}></span>
-                <li key={i} className={classes.competenciesListItem}>
-                  {data}
-                </li>
-              </div>
-            ))}
-          </div> */}
           <br />
 
           <div className={classes.registrationContainer}>
@@ -222,22 +228,6 @@ const AcademiesLayout = props => {
               with Industry
             </p>
           </div>
-
-          {/* <div className={classes.scholarshipDiv}>
-            <h2 className={classes.h2Tag}>Scholarship opportunities</h2>
-
-            <p>Challenge Day(mid of June)</p>
-            <p>6 full/ 10 half Scholarships (based on a competition)</p>
-          </div> */}
-
-          {/* <div className={classes.referralProgramDiv}>
-            <h2 className={classes.h2Tag}>Program package includes</h2>
-
-            <h3>
-              Referral Program: 50&euro; additional discount for the new
-              student, 50&euro; reward for the alumni member
-            </h3>
-          </div> */}
         </div>
       )}
     </Fragment>

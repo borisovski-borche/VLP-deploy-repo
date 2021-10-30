@@ -1,11 +1,11 @@
-@use "../../styles/variables.scss" as var;
-@use "../../styles/mixins.scss" as mixins;
+@use "variables.scss" as var;
+@use "mixins.scss" as mixins;
 
 .academiesMain {
   background: rgba(0, 42, 126, 0.75);
   color: white;
-  font-family: var.$font-poppins;
   padding: 3rem 15rem;
+  padding-bottom: 6rem;
 
   @include mixins.breakpoint(mobileonly) {
     padding: 1.5rem 3rem;
