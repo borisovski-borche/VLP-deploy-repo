@@ -1,4 +1,5 @@
 @use "../../../styles/variables.scss" as var;
+@use "../../../styles/mixins.scss" as mixins;
 
 .panelHeading {
   display: flex;
@@ -14,12 +15,16 @@
 
 .panelData {
   overflow: hidden;
-  max-height: 0px;
+  max-height: 760px;
+
+  @include mixins.breakpoint(desktop) {
+    max-height: 525px;
+  }
 }
 
 .open {
   transition: 1s ease;
-  max-height: 1000px;
+  max-height: 3000px;
 }
 
 .close {

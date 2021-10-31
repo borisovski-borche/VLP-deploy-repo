@@ -54,32 +54,32 @@ const AcademiesLayout = props => {
         <div className={classes.academyContainer}>
           <h2 className={classes.title}>{academy.title}</h2>
 
-          <div className={classes.icons}>
-            <div className={classes.iconsDiv}>
+          <div className={classes.iconsContainer}>
+            <div className={classes.iconBox}>
               <img
-                className={classes.moneyIcon}
+                className={classes.icon}
                 src="/img/money-icon.svg"
-                alt=""
+                alt="wallet icon"
               />
               <span className={classes.iconSpan}>{academy.price} &euro;</span>
             </div>
 
-            <div className={classes.iconsDiv}>
+            <div className={classes.iconBox}>
               <img
-                className={classes.calendarIcon}
+                className={classes.icon}
                 src="/img/calendar-icon.svg"
-                alt=""
+                alt="calendar icon"
               />
               <span className={classes.iconSpan}>
                 {academy.timeline?.duration}
               </span>
             </div>
 
-            <div className={classes.iconsDiv}>
+            <div className={classes.iconBox}>
               <img
-                className={classes.timeIcon}
+                className={classes.icon}
                 src="/img/time-icon.svg"
-                alt=""
+                alt="clock icon"
               />
               <span className={classes.iconSpan}>
                 {academy.timeline?.classes}
@@ -87,12 +87,21 @@ const AcademiesLayout = props => {
             </div>
           </div>
 
-          <div className={classes.courseInfoDiv}>
-            <div className={classes.aboutCourseDiv}>
+          <div
+            className={classes.courseInfoDiv}
+            style={{ display: academy.id === "web-dev" && "block" }}
+          >
+            <div
+              className={classes.aboutCourseDiv}
+              style={{ width: academy.id === "web-dev" && "100%" }}
+            >
               <p>{academy.overview}</p>
             </div>
 
-            <div className={classes.timelineDiv}>
+            <div
+              className={classes.timelineContainer}
+              style={{ minWidth: academy.id === "web-dev" && "100%" }}
+            >
               <h3>Timeline</h3>
 
               {academy.timeline?.semesters.map(timeline => {
@@ -107,27 +116,16 @@ const AcademiesLayout = props => {
                   </div>
                 );
               })}
-
-              {/* {academy.timeline?.semesters.map(data =>
-                data.list_data.map((list, i) => <li key={i}>{list}</li>)
-              )} */}
-
               <p>{academy.timeline?.lectures}</p>
             </div>
           </div>
-
-          {/* <AccordionApp
-            academy={academy}
-            isModalOpen={isModalOpen}
-            toggleModal={toggleModal}
-          /> */}
 
           <AcademyCarousel academyData={academy} />
 
           <ExpansionPanel
             title="Study Program"
             summary=""
-            startingHeight="526px"
+            // startingHeight="526px"
           >
             <div className={classes.subjectCardContainer}>
               {placeholderAcademyData.map(subject => (
@@ -204,9 +202,8 @@ const AcademiesLayout = props => {
             </div>
           </div>
 
-          <div className={classes.programDiv}>
+          <div className={classes.programContainer}>
             <h2 className={classes.h2Tag}>Program package includes</h2>
-
             <span className={classes.checkSign}></span>
             <p>Learning materials</p>
             <span className={classes.checkSign}></span>

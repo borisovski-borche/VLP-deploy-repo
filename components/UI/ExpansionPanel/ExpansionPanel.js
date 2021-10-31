@@ -34,7 +34,7 @@ const ExpansionPanel = ({ title, summary, children, startingHeight }) => {
         </div>
       </div>
       <div
-        style={{ maxHeight: isOpen ? "5000px" : startingHeight || "0px" }}
+        // style={{ maxHeight: isOpen ? "5000px" : startingHeight || "0px" }}
         className={`${classes.panelData} ${
           isOpen ? classes.open : classes.close
         }`}
