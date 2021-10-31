@@ -1,30 +1,30 @@
 @use "../../../styles/variables.scss" as var;
+@use "../../../styles/mixins.scss" as mixins;
 
 .panelHeading {
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 2.2rem;
   font-family: var.$font-open-sans;
 
-  h3 {
+  h2 {
     font-weight: 400;
-  }
-
-  h3:hover {
-    transition: 0.2s ease-in-out;
-    background-color: var.$light-gray;
+    font-size: 3rem;
   }
 }
 
 .panelData {
   overflow: hidden;
-  max-height: 0px;
+  max-height: 760px;
+
+  @include mixins.breakpoint(desktop) {
+    max-height: 525px;
+  }
 }
 
 .open {
   transition: 1s ease;
-  max-height: 1000px;
+  max-height: 3000px;
 }
 
 .close {
@@ -45,9 +45,9 @@
 }
 
 .chevronUp {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
 }
 
 .chevronDown {
-  transform: rotate(0);
+  transform: rotate(0deg);
 }

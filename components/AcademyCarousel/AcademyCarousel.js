@@ -21,7 +21,7 @@ const AcademyCarousel = ({ academyData }) => {
         key={i}
         onClick={e => setCounter(-i)}
         style={{
-          backgroundColor: counter === -i && "rgba(255, 255, 255, 0.6)",
+          background: counter === -i && "rgba(255, 255, 255, 1)",
           borderBottom: counter === -i && "3px solid #004e97",
         }}
       >
@@ -42,7 +42,7 @@ const AcademyCarousel = ({ academyData }) => {
       }
 
       setCounter(counter - 1);
-    }, 15000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
@@ -77,14 +77,16 @@ const AcademyCarousel = ({ academyData }) => {
           className={classes.carouselSlide}
           style={{ transform: `translateX(${counter}00%)` }}
         >
-          <Image
-            src={`/img/carousel/${item}.jpg`}
-            height="500px"
-            width="888px"
-            // layout="fill"
-          />
+          <div className={classes.imageContainer}>
+            <Image
+              src={`/img/carousel/${item}.jpg`}
+              alt={item}
+              height="550px"
+              width="888px"
+              layout="responsive"
+            />
+          </div>
 
-          <div className={classes.gradientDiv}></div>
           <div className={classes.dataContainer}>{data}</div>
         </div>
       );
@@ -92,12 +94,10 @@ const AcademyCarousel = ({ academyData }) => {
     .filter(el => el);
 
   return (
-    <>
-      <div className={classes.carouselContainer}>
-        <div className={classes.carouselControls}>{controlsJsx}</div>
-        {slideJsx}
-      </div>
-    </>
+    <div className={classes.carouselMain}>
+      <div className={classes.carouselContainer}>{slideJsx}</div>
+      <div className={classes.carouselControls}>{controlsJsx}</div>
+    </div>
   );
 };
 

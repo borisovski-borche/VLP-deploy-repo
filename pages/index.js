@@ -1,9 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 
-
-import Card from "../components/Card/Card";
-import AccordionApp from "../components/Layout/Accordion/AccordionApp";
+import AcademyCard from "../components/AcademyCard/AcademyCard";
 
 import classes from "../styles/HomePage.module.scss";
 
@@ -28,7 +25,7 @@ export default function HomePage(props) {
               Master the most requested skills with the help of real experts
             </h4>
           </div>
-          <img src="./img/heroimg.png" alt="heroimg" />
+          <img src="./img/heroimg.jpg" alt="heroimg" />
         </div>
         <div className={classes.contentContainer}>
           <div className={classes.academyRates}>
@@ -49,18 +46,11 @@ export default function HomePage(props) {
             Available academies
           </h1>
           <div className={classes.academyCardContainer}>
-            {academies.map((academy) => (
-              
-              <Card  academy={academy} />
-              
+            {academies.map(academy => (
+              <AcademyCard academy={academy} key={academy.id} />
             ))}
           </div>
-          <div className={classes.copyrightTextContainer}>
-            <small>
-              &copy; 2021. All rights reserved. Seavus Education and Development
-              Center
-            </small>
-          </div>
+          <div className={classes.copyrightTextContainer}></div>
         </div>
       </div>
     </Fragment>

@@ -4,6 +4,7 @@ const useClickOutside = passedHandler => {
   let elRef = useRef();
   useEffect(() => {
     let handler = event => {
+      console.log(event.target)
       if (!elRef.current.contains(event.target)) {
         passedHandler();
       }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -7,8 +7,10 @@ import axios from "axios";
 
 import Link from "next/link";
 import AcademiesLayout from "../../components/AcademiesLayout/AcademiesLayout";
+
 import BackToTop from "../../components/UI/BackToTop/BackToTop";
-import classes from "./studentProgramId.module.scss";
+import classes from "../../styles/studentProgramId.module.scss";
+import Modal from "../../components/UI/Modal/Modal";
 
 const AcademyPage = props => {
   const router = useRouter();
@@ -30,12 +32,12 @@ const AcademyPage = props => {
   }, [router.asPath]);
 
   return (
-    <div>
+    <Fragment>
       <Head>
         <link rel="icon" type="image/png" href="/img/sedc-logo.png" />
         <title>SEDC - {selectedAcademy.title}</title>
       </Head>
-      <main className={classes.academiesMain}>
+      <div className={classes.academiesMain}>
         <div className={classes.wrapperContainer}>
           <Link href={`/`}>
             <div className={classes.backDiv}>
@@ -58,14 +60,8 @@ const AcademyPage = props => {
             </div>
           </Link>
           <div className={classes.academyTitleDiv}>
-            {/* <img
-            className={classes.screenIcon}
-            src={`/img/${academyData.id}.png`}
-            alt=""
-          /> */}
             <h1 className={classes.title}>{academyData.title}</h1>
           </div>
-
           <div className={classes.buttonsDiv}>
             {academyData.study_programs.map(program => (
               <button
@@ -96,15 +92,21 @@ const AcademyPage = props => {
 
           <AcademiesLayout
             academy={selectedAcademy}
-            isModalOpen={isModalOpen}
-            toggleModal={toggleModal}
+            // isModalOpen={isModalOpen}
+            // toggleModal={toggleModal}
           />
-          {/* <button onClick={toggleModal} type="button"> Read More </button> */}
-          {/* {isModalOpen && <Modal onRequestClose={toggleModal} />}   */}
+          <button onClick={toggleModal} type="button">
+            {" "}
+            Read More{" "}
+          </button>
+
+          {isModalOpen && (
+            <Modal toggleModal={toggleModal} setModalIsOpen={setModalIsOpen} />
+          )}
           <BackToTop />
         </div>
-      </main>
-    </div>
+      </div>
+    </Fragment>
   );
 };
 

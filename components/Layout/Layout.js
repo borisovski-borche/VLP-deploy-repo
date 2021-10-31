@@ -3,7 +3,7 @@ import CompanyLogo from "../UI/CompanyLogo/CompanyLogo";
 import Navbar from "../UI/Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-const Layout = (props) => {
+const Layout = props => {
   return (
     <Fragment>
       <header>
