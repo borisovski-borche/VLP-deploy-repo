@@ -3,7 +3,6 @@ import classes from "./AcademyCard.module.scss";
 
 const AcademyCard = (props) => {
   const { academy } = props;
-  const showIcon = true;
 
   return (
     <Link
@@ -11,15 +10,10 @@ const AcademyCard = (props) => {
       key={academy.id}
     >
       <div className={classes.academyCard}>
-        {showIcon ? (
           <img
             className={classes.academyIcon}
             src={`/img/cards-icons/color/${academy.id}.png`}
           />
-        ) : (
-          <> </>
-        )}
-
         <a>{academy.title.replace("Academy For ", "")}</a>
       </div>
 
