@@ -30,6 +30,7 @@
     color: var.$logo-blue-dark;
   }
   img {
+    width: 0;
     margin-right: 8rem;
     margin-bottom: 1.5rem;
     align-self: flex-end;
@@ -86,7 +87,6 @@
 //     color: 0.8;
 //   }
 // }
-
 
 .academyRates {
   display: flex;

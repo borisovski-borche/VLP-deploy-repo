@@ -2,8 +2,6 @@
 @use "../../styles/variables.scss" as var;
 
 .footer {
-  // min-height: 60rem;
-  // max-width: 200rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,35 +11,33 @@
   box-sizing: border-box;
   user-select: none;
   font-family: var.$font-poppins;
-  margin: 0 auto;
+}
+
+.footer__mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-right: 30rem;
-  padding-left: 30rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  justify-content: center;
 }
 
 .footer__logo {
+  min-width: 90rem;
   background-color: var.$navy-dark;
   display: flex;
   justify-content: center;
   border-top: 0.0625rem solid #373f45;
   border-bottom: 0.0625rem solid #373f45;
-  // margin-left: auto;
-  // margin-right: auto;
-  margin-left: 22%;
-  margin-right: 22%;
-  margin-top: 0.7rem;
 }
 
 .footer__logo > a > img {
-  display: flex;
+  vertical-align: middle;
+  border: 0;
 }
 
 .col > ul > div > a {
@@ -64,6 +60,7 @@
   font-weight: 500;
   font-size: 1.7rem;
   padding-right: 2.5rem;
+  padding-left: 1.5rem;
 }
 
 .col > ul > h4 > a {
@@ -76,23 +73,22 @@
 .col > ul {
   padding: 0;
   margin: 0;
+  padding-left: 1.5rem;
 }
 
 .col > ul > div {
+  display: flex;
   padding: 0.3rem;
   margin-bottom: 0.45rem;
-  display: flex;
 }
 
 .copyrightTextContainer {
   display: flex;
-
   color: #505b6d;
   margin-top: 0.9375rem;
   font-weight: 300;
   font-size: 1.3rem;
-  margin-left: 46rem;
-  margin-right: 46rem;
+  justify-content: center;
 }
 
 .col > .col__social > h4 {
@@ -108,5 +104,18 @@
 
   &:hover {
     color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .copyrightTextContainer {
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 0.75rem;
   }
 }
