@@ -7,8 +7,10 @@ import axios from "axios";
 
 import Link from "next/link";
 import AcademiesLayout from "../../components/AcademiesLayout/AcademiesLayout";
+
 import BackToTop from "../../components/UI/BackToTop/BackToTop";
 import classes from "../../styles/studentProgramId.module.scss";
+import Modal from "../../components/UI/Modal/Modal";
 
 const AcademyPage = props => {
   const router = useRouter();
@@ -90,9 +92,17 @@ const AcademyPage = props => {
 
           <AcademiesLayout
             academy={selectedAcademy}
-            isModalOpen={isModalOpen}
-            toggleModal={toggleModal}
+            // isModalOpen={isModalOpen}
+            // toggleModal={toggleModal}
           />
+          <button onClick={toggleModal} type="button">
+            {" "}
+            Read More{" "}
+          </button>
+
+          {isModalOpen && (
+            <Modal toggleModal={toggleModal} setModalIsOpen={setModalIsOpen} />
+          )}
           <BackToTop />
         </div>
       </div>
