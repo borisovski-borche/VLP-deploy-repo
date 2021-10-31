@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import AcademyCard from "../components/AcademyCard/AcademyCard";
+
 import classes from "../styles/HomePage.module.scss";
 
 import axios from "axios";
@@ -46,26 +48,10 @@ export default function HomePage(props) {
           </h1>
           <div className={classes.academyCardContainer}>
             {academies.map(academy => (
-              <Link
-                href={`/${academy.id}/${academy.study_programs[0].id}`}
-                key={academy.id}
-              >
-                <div className={classes.academyCard}>
-                  <img
-                    className={classes.academyLogo}
-                    src={`/img/${academy.id}.png`}
-                  ></img>
-                  <a>{academy.title.replace("Academy For ", "")}</a>
-                </div>
-              </Link>
+              <AcademyCard academy={academy} key={academy.id} />
             ))}
           </div>
-          <div className={classes.copyrightTextContainer}>
-            <small>
-              &copy; 2021. All rights reserved. Seavus Education and Development
-              Center
-            </small>
-          </div>
+          <div className={classes.copyrightTextContainer}></div>
         </div>
       </div>
     </Fragment>

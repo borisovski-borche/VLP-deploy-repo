@@ -42,7 +42,7 @@ const AcademyCarousel = ({ academyData }) => {
       }
 
       setCounter(counter - 1);
-    }, 15000);
+    }, 10000);
 
     return () => {
       clearInterval(interval);
@@ -79,6 +79,7 @@ const AcademyCarousel = ({ academyData }) => {
         >
           <Image
             src={`/img/carousel/${item}.jpg`}
+            alt={item}
             height="500px"
             width="888px"
             // layout="fill"

@@ -4,16 +4,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-size: 2.2rem;
   font-family: var.$font-open-sans;
 
-  h3 {
+  h2 {
     font-weight: 400;
-  }
-
-  h3:hover {
-    transition: 0.2s ease-in-out;
-    background-color: var.$light-gray;
+    font-size: 3rem;
   }
 }
 
@@ -45,9 +40,9 @@
 }
 
 .chevronUp {
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
 }
 
 .chevronDown {
-  transform: rotate(0);
+  transform: rotate(0deg);
 }
