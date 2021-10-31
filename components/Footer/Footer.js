@@ -165,15 +165,17 @@ const Footer = () => {
                 <li>
                   <a href="https://www.sedc.mk/?page_id=439">ECDL</a>
                 </li>
+                <li>
+                  <h3>
+                    <a href="https://www.sedc.mk/facilty-use/">FACILITY USE</a>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <a href="https://www.sedc.mk/contact-us/">CONTACT</a>
+                  </h3>
+                </li>
               </ul>
-
-              <h3>
-                <a href="https://www.sedc.mk/facilty-use/">FACILITY USE</a>
-              </h3>
-
-              <h3>
-                <a href="https://www.sedc.mk/contact-us/">CONTACT</a>
-              </h3>
             </div>
             <div className={classes.col}>
               <div className={classes.col__social}>
