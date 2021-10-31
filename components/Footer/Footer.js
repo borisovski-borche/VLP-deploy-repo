@@ -295,7 +295,7 @@ const Footer = () => {
               Center
             </small>
           </div>
-
+        </div>
         </div>
         <div className={classes.footer__logo}>
           <a href="https://aricomagroup.com/en/">
