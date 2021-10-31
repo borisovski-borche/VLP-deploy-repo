@@ -24,7 +24,7 @@ export default function HomePage(props) {
               Master the most requested skills with the help of real experts
             </h4>
           </div>
-          <img src="./img/heroimg.png" alt="heroimg" />
+          <img src="./img/heroimg.jpg" alt="heroimg" />
         </div>
         <div className={classes.contentContainer}>
           <div className={classes.academyRates}>

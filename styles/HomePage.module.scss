@@ -3,36 +3,35 @@
 
 .heroDiv {
   display: flex;
-  justify-content: space-between;
-  background-color: var.$navy-light;
+  align-items: center;
   width: 100%;
-  height: 60rem;
+  height: 100vh;
 
   h1 {
-    margin-top: 12rem;
-    margin-left: 8rem;
+    margin-left: 16rem;
     justify-self: center;
     text-align: left;
-    font-family: var.$font-poppins;
-    font-weight: 800;
-    color: var.$logo-blue-dark;
+    font-family: var.$font-open-sans;
+    font-weight: 600;
+    color: #fff;
     width: 50rem;
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
   h4 {
     width: 50rem;
-    margin-left: 8rem;
+    margin-left: 16rem;
     justify-self: center;
     align-self: center;
-    font-family: var.$font-poppins;
-    font-weight: 500;
+    font-family: var.$font-open-sans;
+    font-weight: 400;
     font-size: 3rem;
-    color: var.$logo-blue-dark;
+    color: #fff;
   }
   img {
-    margin-right: 8rem;
-    margin-bottom: 1.5rem;
-    align-self: flex-end;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
   }
 }
 
@@ -115,8 +114,7 @@
 }
 
 .contentContainer {
-  background: transparent
-    linear-gradient(180deg, #fff 50%, #eaf3ff 60%, #e9f2ff 100%);
+  background: #fcfcfc;
 }
 
 .copyrightTextContainer {
