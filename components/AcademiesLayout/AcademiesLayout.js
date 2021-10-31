@@ -57,7 +57,7 @@ const AcademiesLayout = props => {
           <div className={classes.iconsContainer}>
             <div className={classes.iconBox}>
               <img
-                className={classes.moneyIcon}
+                className={classes.icon}
                 src="/img/money-icon.svg"
                 alt="wallet icon"
               />
@@ -66,7 +66,7 @@ const AcademiesLayout = props => {
 
             <div className={classes.iconBox}>
               <img
-                className={classes.calendarIcon}
+                className={classes.icon}
                 src="/img/calendar-icon.svg"
                 alt="calendar icon"
               />
@@ -77,7 +77,7 @@ const AcademiesLayout = props => {
 
             <div className={classes.iconBox}>
               <img
-                className={classes.timeIcon}
+                className={classes.icon}
                 src="/img/time-icon.svg"
                 alt="clock icon"
               />
@@ -87,12 +87,21 @@ const AcademiesLayout = props => {
             </div>
           </div>
 
-          <div className={classes.courseInfoDiv}>
-            <div className={classes.aboutCourseDiv}>
+          <div
+            className={classes.courseInfoDiv}
+            style={{ display: academy.id === "web-dev" && "block" }}
+          >
+            <div
+              className={classes.aboutCourseDiv}
+              style={{ width: academy.id === "web-dev" && "100%" }}
+            >
               <p>{academy.overview}</p>
             </div>
 
-            <div className={classes.timelineDiv}>
+            <div
+              className={classes.timelineContainer}
+              style={{ minWidth: academy.id === "web-dev" && "100%" }}
+            >
               <h3>Timeline</h3>
 
               {academy.timeline?.semesters.map(timeline => {
@@ -116,7 +125,7 @@ const AcademiesLayout = props => {
           <ExpansionPanel
             title="Study Program"
             summary=""
-            startingHeight="526px"
+            // startingHeight="526px"
           >
             <div className={classes.subjectCardContainer}>
               {placeholderAcademyData.map(subject => (

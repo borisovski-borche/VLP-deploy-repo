@@ -10,12 +10,15 @@
     padding: 0;
   }
   @include mixins.breakpoint(tablet) {
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
   }
   @include mixins.breakpoint(desktop) {
     padding: 3rem 10rem;
   }
   @include mixins.breakpoint(largedesktop) {
+    padding: 3rem 12rem;
+  }
+  @include mixins.breakpoint(tv) {
     padding: 3rem 15rem;
   }
 }

@@ -8,19 +8,29 @@
   border-top: 1px solid var.$dark-gray;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   font-family: var.$font-open-sans;
-  padding: 1rem 6rem;
+  padding: 1rem 2rem;
   padding-bottom: 4rem;
 
-  @include mixins.breakpoint(mobileonly) {
-    border: 0.2rem solid var.$logo-blue-dark;
-    padding: 1rem 2rem;
-    padding-bottom: 2rem;
+  @include mixins.breakpoint(tablet) {
+    padding: 1rem 3rem;
   }
+  @include mixins.breakpoint(desktop) {
+    padding: 1rem 6rem;
+  }
+
+  // @include mixins.breakpoint(mobileonly) {
+  //   border: 0.2rem solid var.$logo-blue-dark;
+  //   padding: 1rem 2rem;
+  //   padding-bottom: 2rem;
+  // }
 
   .subjectCardContainer {
     display: flex;
-    // padding-bottom: 5rem;
-    justify-content: space-between;
+    padding-bottom: 5rem;
+    // justify-content: space-between;
+    justify-content: center;
+    // align-items: center;
+
     padding: 0 2rem;
     flex-wrap: wrap;
   }
@@ -32,94 +42,103 @@
 
   .title {
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin-left: 1rem;
 
-    @include mixins.breakpoint(mobileonly) {
-      font-size: 2rem;
+    @include mixins.breakpoint(laptop) {
+      flex-direction: row;
+      font-size: 4.5rem;
+    }
+    @include mixins.breakpoint(largedesktop) {
+      font-size: 5rem;
     }
   }
 
   .h2Tag {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     font-family: var.$font-open-sans;
-    @include mixins.breakpoint(mobileonly) {
-      font-size: 1.7rem;
-    }
+    // @include mixins.breakpoint(mobileonly) {
+    //   font-size: 2rem;
+    // }
   }
 
   .iconsContainer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    // align-items: center;
+    width: 100%;
+    overflow: hidden;
+
+    @include mixins.breakpoint(laptop) {
+      flex-direction: row;
+    }
   }
 
   .iconBox {
     display: flex;
     align-items: center;
     margin-top: 1rem;
-  }
+    margin-left: 10px;
 
-  .moneyIcon,
-  .calendarIcon,
-  .timeIcon {
-    height: 4rem;
-    margin-left: 1rem;
-
-    @include mixins.breakpoint(mobileonly) {
-      height: 2.3rem;
-    }
-  }
-
-  .iconSpan {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-left: 2rem;
-    margin-right: 4rem;
-
-    @include mixins.breakpoint(mobileonly) {
-      font-size: 1.6rem;
+    .icon {
+      height: 20px;
       margin-left: 1rem;
+
+      @include mixins.breakpoint(laptop) {
+        height: 30px;
+        margin-left: 1.5rem;
+      }
+    }
+
+    .iconSpan {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-left: 1rem;
+
+      @include mixins.breakpoint(laptop) {
+        flex-direction: row;
+        font-size: 2.3rem;
+      }
     }
   }
 
   .courseInfoDiv {
-    display: flex;
     justify-content: space-between;
     margin: 2rem auto;
+    display: block;
 
-    @include mixins.breakpoint(mobileonly) {
-      display: block;
+    @include mixins.breakpoint(largedesktop) {
+      display: flex;
+      margin: 4rem auto;
     }
   }
 
   .aboutCourseDiv {
-    width: 55%;
-    font-size: 1.8rem;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.6rem;
 
-    @include mixins.breakpoint(mobileonly) {
-      width: 100%;
-      padding: 1rem 2rem;
-      font-size: 1.3rem;
+    @include mixins.breakpoint(largedesktop) {
+      width: 50%;
     }
   }
 
-  .timelineDiv {
-    min-width: 40%;
+  .timelineContainer {
+    min-width: 100%;
     max-width: 50%;
+    font-size: 1.6rem;
+
     background-color: var.$logo-blue-dark;
     color: white;
-    padding: 1rem 4rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 0.5rem 2rem 1rem 2rem;
 
-    @include mixins.breakpoint(mobileonly) {
-      width: 100%;
-      padding: 1rem 2rem;
-      font-size: 1.3rem;
-      margin-top: 2rem;
+    @include mixins.breakpoint(largedesktop) {
+      min-width: 50%;
     }
+    // margin-top: 2rem;
+    // margin-left: 2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
   .competenciesTitle {
@@ -142,12 +161,12 @@
     margin-left: 3rem;
     margin-bottom: 1.6rem;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
-    @include mixins.breakpoint(mobileonly) {
-      font-size: 1.3rem;
-      margin-top: 1rem;
-    }
+    // @include mixins.breakpoint(mobileonly) {
+    //   font-size: 1.3rem;
+    //   margin-top: 1rem;
+    // }
   }
 
   .checkSign {
@@ -168,37 +187,57 @@
     }
   }
 
-  .tableDiv {
-    overflow: hidden;
-    overflow-x: auto;
-    clear: both;
-    height: 100%;
-    width: 50%;
-    padding: 0rem 4rem;
-
-    @include mixins.scrollbars(
-      10rem,
-      0.8rem,
-      var.$logo-blue-dark,
-      var.$lavender-light
-    );
-
-    @include mixins.breakpoint(mobileonly) {
-      @include mixins.scrollbars(
-        10rem,
-        0.6rem,
-        var.$logo-blue-dark,
-        var.$lavender-light
-      );
-    }
-  }
-
   .registrationContainer {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     display: flex;
+    flex-direction: column;
     margin-top: 3rem;
-    height: 400px;
+    height: auto;
     font-size: 1.8rem;
+
+    @include mixins.breakpoint(desktop) {
+      flex-direction: row;
+      font-size: 1.6rem;
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .tableDiv {
+      overflow: hidden;
+      overflow-x: auto;
+      clear: both;
+      height: 100%;
+      width: 100%;
+      font-size: 1.6rem;
+      // padding: 0rem 4rem;
+      padding: 0rem 2rem;
+      @include mixins.scrollbars(
+        10rem,
+        0.8rem,
+        var.$logo-blue-dark,
+        var.$lavender-light
+      );
+
+      @include mixins.breakpoint(mobileonly) {
+        @include mixins.scrollbars(
+          10rem,
+          0.6rem,
+          var.$logo-blue-dark,
+          var.$lavender-light
+        );
+      }
+    }
+
+    .termsDiv {
+      padding: 1rem 4rem 3rem 4rem;
+      // border-right: 2px solid var.$primary-dark;
+      // width: 50%;
+      font-size: 1.6rem;
+      width: 100%;
+      height: 100%;
+      background: var.$light-gray;
+    }
   }
 
   .priceTable {
@@ -231,17 +270,9 @@
 
   .tableCell {
     padding: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
     border-right: 0.1rem solid var.$logo-blue-dark;
-  }
-
-  .termsDiv {
-    padding: 0rem 4rem;
-    border-right: 2px solid var.$primary-dark;
-    width: 50%;
-    height: 100%;
-    background: var.$light-gray;
   }
 
   .programContainer {
@@ -251,9 +282,9 @@
     p {
       font-weight: bold;
       margin-left: 3rem;
+      font-size: 1.6rem;
 
       @include mixins.breakpoint(mobileonly) {
-        font-size: 1.3rem;
         margin-top: 1rem;
       }
     }

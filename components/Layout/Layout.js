@@ -6,12 +6,12 @@ import Footer from "../Footer/Footer";
 const Layout = props => {
   return (
     <Fragment>
-      {/* <header>
+      <header>
         <CompanyLogo />
         <Navbar />
-      </header> */}
+      </header>
       <main>{props.children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </Fragment>
   );
 };
