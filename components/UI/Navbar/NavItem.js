@@ -15,7 +15,7 @@ function NavItem(props) {
   }, [router.asPath]);
 
   return (
-    <li ref={elRef}>
+    <li ref={elRef} className={classes.listedItemContainer}>
       <span className={classes.navbar__item} onClick={() => setOpen(!open)}>
         {props.item}
         {props.item === "facility use" || props.item === "contact" ? (
