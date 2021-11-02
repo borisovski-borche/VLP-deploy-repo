@@ -129,7 +129,11 @@ const AcademiesLayout = props => {
           >
             <div className={classes.subjectCardContainer}>
               {placeholderAcademyData.map(subject => (
-                <SubjectCard key={subject.title} cardData={subject} />
+                <SubjectCard
+                  key={subject.title}
+                  cardData={subject}
+                  modalHandler={toggleModal}
+                />
               ))}
             </div>
           </ExpansionPanel>

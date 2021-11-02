@@ -89,13 +89,9 @@ const AcademyPage = props => {
 
         <AcademiesLayout
           academy={selectedAcademy}
-          // isModalOpen={isModalOpen}
-          // toggleModal={toggleModal}
+          isModalOpen={isModalOpen}
+          toggleModal={toggleModal}
         />
-        <button onClick={toggleModal} type="button">
-          {" "}
-          Read More{" "}
-        </button>
 
         {isModalOpen && (
           <Modal toggleModal={toggleModal} setModalIsOpen={setModalIsOpen} />
