@@ -38,73 +38,69 @@ const AcademyPage = props => {
         <title>SEDC - {selectedAcademy.title}</title>
       </Head>
       <div className={classes.academiesMain}>
-        <div className={classes.wrapperContainer}>
-          <Link href={`/`}>
-            <div className={classes.backDiv}>
-              <p className={classes.backToHome}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-chevron-left"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                  />
-                </svg>
-                Back to home
-              </p>
-            </div>
-          </Link>
-          <div className={classes.academyTitleDiv}>
-            <h1 className={classes.title}>{academyData.title}</h1>
-          </div>
-          <div className={classes.buttonsDiv}>
-            {academyData.study_programs.map(program => (
-              <button
-                className={classes.academyBtn}
-                style={{
-                  borderBottom:
-                    program.id === selectedAcademy.id
-                      ? "4px solid #0079c8"
-                      : "",
-                  backgroundColor:
-                    program.id === selectedAcademy.id ? "#f5f5f6" : "",
-                }}
-                key={program.id}
-                onClick={e => {
-                  router.push(
-                    `/${router.query.academyId}/${program.id}`,
-                    undefined,
-                    {
-                      shallow: true,
-                    }
-                  );
-                }}
+        <Link href={`/`}>
+          <div className={classes.backDiv}>
+            <p className={classes.backToHome}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-chevron-left"
+                viewBox="0 0 16 16"
               >
-                {program.title}
-              </button>
-            ))}
+                <path
+                  fillRule="evenodd"
+                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                />
+              </svg>
+              Back to home
+            </p>
           </div>
-
-          <AcademiesLayout
-            academy={selectedAcademy}
-            // isModalOpen={isModalOpen}
-            // toggleModal={toggleModal}
-          />
-          <button onClick={toggleModal} type="button">
-            {" "}
-            Read More{" "}
-          </button>
-
-          {isModalOpen && (
-            <Modal toggleModal={toggleModal} setModalIsOpen={setModalIsOpen} />
-          )}
-          <BackToTop />
+        </Link>
+        <div className={classes.academyTitleDiv}>
+          <h1 className={classes.title}>{academyData.title}</h1>
         </div>
+        <div className={classes.buttonsDiv}>
+          {academyData.study_programs.map(program => (
+            <button
+              className={classes.academyBtn}
+              style={{
+                borderBottom:
+                  program.id === selectedAcademy.id ? "4px solid #0079c8" : "",
+                backgroundColor:
+                  program.id === selectedAcademy.id ? "#f5f5f6" : "",
+              }}
+              key={program.id}
+              onClick={e => {
+                router.push(
+                  `/${router.query.academyId}/${program.id}`,
+                  undefined,
+                  {
+                    shallow: true,
+                  }
+                );
+              }}
+            >
+              {program.title}
+            </button>
+          ))}
+        </div>
+
+        <AcademiesLayout
+          academy={selectedAcademy}
+          // isModalOpen={isModalOpen}
+          // toggleModal={toggleModal}
+        />
+        <button onClick={toggleModal} type="button">
+          {" "}
+          Read More{" "}
+        </button>
+
+        {isModalOpen && (
+          <Modal toggleModal={toggleModal} setModalIsOpen={setModalIsOpen} />
+        )}
+        <BackToTop />
       </div>
     </Fragment>
   );
