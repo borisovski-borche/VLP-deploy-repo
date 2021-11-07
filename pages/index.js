@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 import AcademyCard from "../components/AcademyCard/AcademyCard";
 
@@ -25,6 +26,8 @@ export default function HomePage(props) {
               Master the most requested skills with the help of real experts
             </h4>
           </div>
+          {/* <img className={classes.iconHero} src="./img/cards-icons/color/academy-for-data-science.png" alt="heroimg" /> */}
+          
           <img src="./img/heroimg.jpg" alt="heroimg" />
         </div>
         <div className={classes.contentContainer}>
@@ -50,7 +53,6 @@ export default function HomePage(props) {
               <AcademyCard academy={academy} key={academy.id} />
             ))}
           </div>
-          <div className={classes.copyrightTextContainer}></div>
         </div>
       </div>
     </Fragment>

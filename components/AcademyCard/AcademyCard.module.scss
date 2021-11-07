@@ -26,15 +26,23 @@
   }
 
   @include mixins.breakpoint(laptop) {
-    width: 20rem;
-    height: 22rem;
+    width: 17rem;
+    height: 19rem;
   }
 
   @include mixins.breakpoint(desktop) {
-    margin: 2rem 0 4rem 0;
-    width: 24rem;
-    height: 28rem;
-    padding: 2rem 0 3.5rem 0;
+    width: 18rem;
+    height: 20rem;
+  }
+
+  @include mixins.breakpoint(largedesktop) {
+    width: 19rem;
+    height: 21rem;
+  }
+
+  @include mixins.breakpoint(tv) {
+    width: 19rem;
+    height: 21rem;
   }
 
 
@@ -48,12 +56,22 @@
     }
 
     @include mixins.breakpoint(laptop) {
-      width: 13rem;
+      width: 10.2rem;
       padding-top: 1.5rem;
     }
 
     @include mixins.breakpoint(desktop) {
-      width: 15rem;
+      width: 11rem;
+      padding-top: 1.5rem;
+    }
+
+    @include mixins.breakpoint(largedesktop) {
+      width: 12.5rem;
+      padding-top: 1.5rem;
+    }
+
+    @include mixins.breakpoint(tv) {
+      width: 12.5rem;
       padding-top: 1.5rem;
     }
   } 
@@ -67,19 +85,31 @@
     //font-family: var.$font-open-sans;
     
     @include mixins.breakpoint(tablet) {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       font-weight: 400;
       margin-top: 1rem;
     }
 
     @include mixins.breakpoint(laptop) {
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       font-weight: 400;
       margin-top: 1rem;
     }
     
     @include mixins.breakpoint(desktop) {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+      margin-top: 1rem;
+    }
+
+    @include mixins.breakpoint(largedesktop) {
+      font-size: 2.3rem;
+      font-weight: 400;
+      margin-top: 1rem;
+    }
+
+    @include mixins.breakpoint(tv) {
+      font-size: 2.3rem;
       font-weight: 400;
       margin-top: 1rem;
     }
