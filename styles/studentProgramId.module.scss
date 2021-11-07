@@ -5,30 +5,36 @@
   background: #002a7ebf;
   color: white;
   padding-bottom: 6rem;
+  // margin-bottom: 5rem;
 
   @include mixins.breakpoint(mobileonly) {
     padding: 0;
+    padding-top: 13rem;
   }
   @include mixins.breakpoint(tablet) {
-    padding: 1rem 3rem;
+    padding: 13rem 3rem 6rem 3rem;
   }
   @include mixins.breakpoint(desktop) {
-    padding: 3rem 10rem;
+    padding: 13rem 10rem 6rem 10rem;
   }
   @include mixins.breakpoint(largedesktop) {
-    padding: 3rem 12rem;
+    padding: 13rem 12rem 6rem 12rem;
   }
   @include mixins.breakpoint(tv) {
-    padding: 3rem 15rem;
+    padding: 13rem 15rem 6rem 15rem;
   }
 }
 
 .wrapperContainer {
   margin-top: 13rem;
+
+  @include mixins.breakpoint(mobileonly) {
+    margin-top: 0;
+  }
 }
 
 .backToHome {
-  margin: 1.2rem;
+  margin: 1.3rem;
   margin-top: 10rem;
   padding-left: 0.5rem;
   font-size: 1.8rem;
@@ -40,7 +46,8 @@
   }
 
   @include mixins.breakpoint(tablet) {
-    margin: 0.2em;
+    margin: 1rem;
+    margin-top: 2rem;
   }
 
   @include mixins.breakpoint(mobileonly) {
@@ -78,6 +85,7 @@
 
     @include mixins.breakpoint(mobileonly) {
       font-size: 2.5rem;
+      width: 70%;
     }
 
     @include mixins.breakpoint(tablet) {
@@ -133,22 +141,10 @@
   cursor: pointer;
   transition: 0.3s ease;
 
-  //   @include mixins.breakpoint(tablet) {
-  //     // font-size: 1.5rem;
-  //     width: auto;
-  //     height: fit-content;
-  //     // margin-bottom: 1rem;
-  //     padding: 0.6rem;
-  //   }
-
-  //   @include mixins.breakpoint(mobileonly) {
-  //     // font-size: 1.3rem;
-  //     width: auto;
-  //     height: fit-content;
-  //     margin-bottom: 1rem;
-  //     padding: 0.6rem;
-  //     border: 2px solid #ffffff;
-  //   }
+  @include mixins.breakpoint(mobileonly) {
+    font-size: 1.6rem;
+    padding: 6px;
+  }
 }
 
 .academyBtn:hover {

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import AcademyCarousel from "../AcademyCarousel/AcademyCarousel";
 import CompetenciesBox from "../CompetenciesBox/CompetenciesBox";
 import SubjectCard from "../SubjectCard/SubjectCard";
@@ -129,7 +129,11 @@ const AcademiesLayout = props => {
           >
             <div className={classes.subjectCardContainer}>
               {placeholderAcademyData.map(subject => (
-                <SubjectCard key={subject.title} cardData={subject} />
+                <SubjectCard
+                  key={subject.title}
+                  cardData={subject}
+                  modalHandler={toggleModal}
+                />
               ))}
             </div>
           </ExpansionPanel>

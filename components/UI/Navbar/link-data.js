@@ -31,27 +31,27 @@ const linkData = {
   ],
   academyItems: [
     {
-      linkTitle: "academy for programming",
+      linkTitle: "programming",
       target: "/academy-for-progamming/web-dev",
     },
     {
-      linkTitle: "academy for design",
+      linkTitle: "design",
       target: "/academy-for-design/web-designer",
     },
     {
-      linkTitle: "academy for computer networks",
+      linkTitle: "computer networks",
       target: "/academy-for-computer-networks/cloud-ops",
     },
     {
-      linkTitle: "academy for software testing",
+      linkTitle: "software testing",
       target: "/academy-for-software-testing/software-tester",
     },
     {
-      linkTitle: "academy for data science",
+      linkTitle: "data science",
       target: "/academy-for-data-science/data-scientist",
     },
     {
-      linkTitle: "academy for digital marketing",
+      linkTitle: "digital marketing",
       target: "/academy-for-digital-marketing/digital-marketer",
     },
   ],

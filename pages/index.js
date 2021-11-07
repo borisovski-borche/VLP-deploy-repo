@@ -20,16 +20,13 @@ export default function HomePage(props) {
       </Head>
       <div>
         <div className={classes.heroDiv}>
-          <div>
+          {/* <div>
             <h1>10 Years Changing Lives</h1>
             <h4>
               Master the most requested skills with the help of real experts
             </h4>
-          </div>
-          {/* <img className={classes.iconHero} src="./img/cards-icons/color/academy-for-data-science.png" alt="heroimg" /> */}
-          
           <img src="./img/heroimg.jpg" alt="heroimg" />
-        </div>
+          {/* </div>
         <div className={classes.contentContainer}>
           <div className={classes.academyRates}>
             <div className={classes.academyRate}>
@@ -44,15 +41,16 @@ export default function HomePage(props) {
               <h1>50+</h1>
               <h4>student's project implementation in the last 5 years</h4>
             </div>
-          </div>
-          <h1 className={classes.availableAcademiesTitle}>
+          </div> */}
+          {/* <h1 className={classes.availableAcademiesTitle}>
             Available academies
-          </h1>
-          <div className={classes.academyCardContainer}>
+          </h1> */}
+          {/* <div className={classes.academyCardContainer}>
             {academies.map(academy => (
               <AcademyCard academy={academy} key={academy.id} />
             ))}
-          </div>
+          </div> */}
+          <div className={classes.copyrightTextContainer}></div>
         </div>
       </div>
     </Fragment>

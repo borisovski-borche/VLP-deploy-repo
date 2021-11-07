@@ -15,7 +15,7 @@
 
 .panelData {
   overflow: hidden;
-  max-height: 760px;
+  max-height: 780px;
 
   @include mixins.breakpoint(desktop) {
     max-height: 525px;

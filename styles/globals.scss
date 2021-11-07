@@ -16,6 +16,12 @@ body {
   background: url("/img/background-img.webp") 0 0 no-repeat fixed;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
