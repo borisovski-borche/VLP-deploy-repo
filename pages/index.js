@@ -18,14 +18,16 @@ export default function HomePage(props) {
         <title>SEDC - Academies</title>
       </Head>
       <div>
-        <div className={classes.heroDiv}>
-          <div>
-            <h1>10 Years Changing Lives</h1>
-            <h4>
-              Master the most requested skills with the help of real experts
-            </h4>
+        <div className={classes.whiteBack}>
+          <div className={classes.heroDiv}>
+            <div>
+              <h1>10 Years Changing Lives</h1>
+              <h4>
+                Master the most requested skills with the help of real experts
+              </h4>
+            </div>
+            {/* <img src="./img/heroimg.jpg" alt="heroimg" /> */}
           </div>
-          {/* <img src="./img/heroimg.jpg" alt="heroimg" /> */}
         </div>
         <div className={classes.contentContainer}>
           <div className={classes.academyRates}>
