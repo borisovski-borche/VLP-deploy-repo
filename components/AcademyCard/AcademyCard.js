@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "./AcademyCard.module.scss";
 
-const AcademyCard = (props) => {
+const AcademyCard = props => {
   const { academy } = props;
 
   return (
@@ -10,13 +10,13 @@ const AcademyCard = (props) => {
       key={academy.id}
     >
       <div className={classes.academyCard}>
-          <img
-            className={classes.academyIcon}
-            src={`/img/cards-icons/color/${academy.id}.png`}
-          />
-        <a>{academy.title.replace("Academy For ", "")}</a>
+        <img
+          className={classes.academyIcon}
+          alt={academy.id}
+          src={`/img/cards-icons/color/${academy.id}.png`}
+        />
+        <span>{academy.title.replace("Academy For ", "")}</span>
       </div>
-
     </Link>
   );
 };

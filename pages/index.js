@@ -9,7 +9,6 @@ import { Fragment } from "react";
 
 export default function HomePage(props) {
   const { academies } = props.data;
-  console.log(academies);
 
   return (
     <Fragment>
@@ -22,9 +21,9 @@ export default function HomePage(props) {
           <div className={classes.heroDiv}>
             <div>
               <h1>10 Years Changing Lives</h1>
-              <h4>
+              <h2>
                 Master the most requested skills with the help of real experts
-              </h4>
+              </h2>
             </div>
             {/* <img src="./img/heroimg.jpg" alt="heroimg" /> */}
           </div>
@@ -32,21 +31,21 @@ export default function HomePage(props) {
         <div className={classes.contentContainer}>
           <div className={classes.academyRates}>
             <div className={classes.academyRate}>
-              <h1>75%</h1>
-              <h4>students employment rate</h4>
+              <h3>75%</h3>
+              <p>students employment rate</p>
             </div>
             <div className={classes.academyRate}>
-              <h1>30+</h1>
-              <h4>partner companies involved in the program</h4>
+              <h3>30+</h3>
+              <p>partner companies involved in the program</p>
             </div>
             <div className={classes.academyRate}>
-              <h1>50+</h1>
-              <h4>student's project implementation in the last 5 years</h4>
+              <h3>50+</h3>
+              <p>student's project implementation in the last 5 years</p>
             </div>
           </div>
-          <h1 className={classes.availableAcademiesTitle}>
+          <h3 className={classes.availableAcademiesTitle}>
             Available academies
-          </h1>
+          </h3>
           <div className={classes.academyCardContainer}>
             {academies.map(academy => (
               <AcademyCard academy={academy} key={academy.id} />
